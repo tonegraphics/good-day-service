@@ -24,7 +24,6 @@ const useStyles = makeStyles(theme => ({
   current: {
     color: colors.yellow,
     backgroundColor: colors.brown,
-    border: '1px solid',
     borderRadius: 10
   },
   other: {
@@ -40,8 +39,6 @@ export default props => {
   } = props;
   const classes = useStyles();
 
-  console.log(currentPage);
-  console.log(pageLinks);
   return (
     <div className={classes.root}>
       {pageLinks.map(link =>

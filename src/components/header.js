@@ -2,8 +2,8 @@ import { Link } from "gatsby";
 import React from "react";
 import { makeStyles } from '@material-ui/styles';
 import Image from 'components/image';
+import HeaderMenu from "components/HeaderMenu";
 import { colors } from 'libs/colors';
-import HeaderMenu from "./HeaderMenu";
 
 const useStyles = makeStyles(theme => ({
   root: {
