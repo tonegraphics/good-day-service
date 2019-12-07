@@ -17,7 +17,7 @@ export default function () {
     <Layout>
       <SEO title="Home" />
       <h1 className={classes.title}>グッドデイサービスです。</h1>
-      <Link to="/ServicesPage">Go to page 2</Link>
+      <Link to="/ServicesPage">サービスについてはこちら</Link>
     </Layout>
   );
 }
