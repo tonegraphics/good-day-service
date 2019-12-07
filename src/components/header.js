@@ -6,34 +6,37 @@ import { colors } from 'libs/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    border: '1px solid'
+    height: 144,
+    padding: '0 16px 0 32px',
+    backgroundColor: colors.yellow,
+    color: colors.brown
+  },
+  logo: {
+    textDecoration: 'none',
+    padding: '16px 0',
+    margin: 0
+  },
+  logoText: {
+    margin: '0 0 8px 0',
+    fontSize: 24,
+  },
+  logoImage: {
+    height: 64,
+    width: 371.52,
+    margin: 0,
   }
 }));
 
-export default function ({ siteTitle }) {
+export default ({ siteTitle }) => {
   const classes = useStyles();
   return (
-    <header
-      style={{
-        background: `${colors.yellow}`,
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <Link
-          to="/"
-          style={{
-            color: `${colors.brown}`,
-            textDecoration: `none`,
-          }}
-        >
-          <Image filename='logo.png' />
+    <header className={classes.root}>
+      <div className={classes.logo}>
+        <p className={classes.logoText}>高齢者・障がい者・障がい児多世代通所型(共生型)</p>
+        <Link to='/'>
+          <div className={classes.logoImage}>
+            <Image filename='logo.png' />
+          </div>
         </Link>
       </div>
     </header>
