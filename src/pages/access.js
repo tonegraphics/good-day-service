@@ -8,7 +8,7 @@ export default function () {
     <Layout>
       <SEO title="Home" />
       <h1>アクセスページです。</h1>
-      <Link to="/CompanyPage">会社概要へ</Link>
+      <Link to="/company">会社概要へ</Link>
     </Layout>
   );
 }
