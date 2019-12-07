@@ -5,12 +5,12 @@ import { colors } from 'libs/colors'
 const useStyles = makeStyles(theme => ({
   title: {
     color: colors.brown,
-    fontSize: '32px',
+    fontSize: '40px',
     borderBottom: `6px solid ${colors.red}`,
     marginBottom: '16px',
     display: 'inline-block',
     '&:first-letter': {
-      fontSize: '48px',
+      fontSize: '56px',
     },
   },
 }))
