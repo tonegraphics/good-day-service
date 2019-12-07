@@ -1,23 +1,31 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import { colors } from 'libs/colors'
+import { Link } from "gatsby";
+import React from "react";
+import { makeStyles } from '@material-ui/styles';
+import Image from 'components/image';
+import { colors } from 'libs/colors';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `${colors.yellow}`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
+const useStyles = makeStyles(theme => ({
+  root: {
+    border: '1px solid'
+  }
+}));
+
+export default function ({ siteTitle }) {
+  const classes = useStyles();
+  return (
+    <header
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        background: `${colors.yellow}`,
+        marginBottom: `1.45rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `1.45rem 1.0875rem`,
+        }}
+      >
         <Link
           to="/"
           style={{
@@ -25,19 +33,9 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <Image filename='logo.png' />
         </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+      </div>
+    </header>
+  );
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
