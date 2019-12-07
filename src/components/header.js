@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import { makeStyles } from '@material-ui/styles';
-import Image from 'components/image';
+import Image from 'components/Image';
 import HeaderMenu from "components/HeaderMenu";
 import { colors } from 'libs/colors';
 
