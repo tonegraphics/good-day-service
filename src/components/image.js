@@ -33,6 +33,7 @@ const Image = (props) => (
         <Img
           alt={props.alt}
           sizes={imageSizes}
+          style={{ margin: 0 }}
         />
       );
     }}

@@ -3,18 +3,21 @@ import React from "react";
 import { makeStyles } from '@material-ui/styles';
 import Image from 'components/image';
 import { colors } from 'libs/colors';
+import HeaderMenu from "./HeaderMenu";
 
 const useStyles = makeStyles(theme => ({
   root: {
     height: 144,
-    padding: '0 16px 0 32px',
+    padding: 0,
+    paddingLeft: 32,
     backgroundColor: colors.yellow,
-    color: colors.brown
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   logo: {
-    textDecoration: 'none',
-    padding: '16px 0',
-    margin: 0
+    color: colors.brown,
+    textDecoration: 'none'
   },
   logoText: {
     margin: '0 0 8px 0',
@@ -23,22 +26,31 @@ const useStyles = makeStyles(theme => ({
   logoImage: {
     height: 64,
     width: 371.52,
+    padding: 0,
     margin: 0,
   }
 }));
 
-export default ({ siteTitle }) => {
+export default props => {
+  const {
+    pageLinks,
+    currentPage
+  } = props;
   const classes = useStyles();
   return (
     <header className={classes.root}>
-      <div className={classes.logo}>
-        <p className={classes.logoText}>高齢者・障がい者・障がい児多世代通所型(共生型)</p>
-        <Link to='/'>
-          <div className={classes.logoImage}>
-            <Image filename='logo.png' />
-          </div>
-        </Link>
-      </div>
+      <Link to='/' className={classes.logo}>
+        <p className={classes.logoText}>
+          高齢者・障がい者・障がい児多世代通所型(共生型)
+        </p>
+        <div className={classes.logoImage}>
+          <Image filename='logo.png'/>
+        </div>
+      </Link>
+      <HeaderMenu
+        currentPage={currentPage}
+        pageLinks={pageLinks}
+      />
     </header>
   );
 }
