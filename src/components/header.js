@@ -1,43 +1,56 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import { colors } from 'libs/colors'
+import { Link } from "gatsby";
+import React from "react";
+import { makeStyles } from '@material-ui/styles';
+import Image from 'components/Image';
+import HeaderMenu from "components/HeaderMenu";
+import { colors } from 'libs/colors';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `${colors.yellow}`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `${colors.brown}`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const useStyles = makeStyles(theme => ({
+  root: {
+    height: 144,
+    padding: 0,
+    paddingLeft: 32,
+    backgroundColor: colors.yellow,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  logo: {
+    color: colors.brown,
+    textDecoration: 'none'
+  },
+  logoText: {
+    margin: '0 0 8px 0',
+    fontSize: 24,
+  },
+  logoImage: {
+    height: 64,
+    width: 371.52,
+    padding: 0,
+    margin: 0,
+  }
+}));
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+export default props => {
+  const {
+    pageLinks,
+    currentPage
+  } = props;
+  const classes = useStyles();
+  return (
+    <header className={classes.root}>
+      <Link to='/' className={classes.logo}>
+        <p className={classes.logoText}>
+          高齢者・障がい者・障がい児多世代通所型(共生型)
+        </p>
+        <div className={classes.logoImage}>
+          <Image filename='logo.png'/>
+        </div>
+      </Link>
+      <HeaderMenu
+        currentPage={currentPage}
+        pageLinks={pageLinks}
+      />
+    </header>
+  );
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header

@@ -5,8 +5,8 @@ import SEO from "components/seo"
 
 export default function () {
   return (
-    <Layout>
-      <SEO title="Home" />
+    <Layout page='/access'>
+      <SEO title="Access" />
       <h1>アクセスページです。</h1>
       <Link to="/company">会社概要へ</Link>
     </Layout>

@@ -16,7 +16,7 @@ export default function () {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <Layout page='/'>
       <SEO title="Home" />
       <h1 className={classes.title}>グッドデイサービスです。</h1>
       <Link to="/services">サービスについてはこちら</Link>
