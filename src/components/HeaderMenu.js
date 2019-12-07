@@ -2,15 +2,18 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Link } from 'gatsby';
 import { colors } from 'libs/colors';
+import { useMediaQuery } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
-  root: {
+const useStyles = makeStyles(theme => ({　
+  root: props => props.matches ? {
     height: 76,
     paddingRight: 64,
     fontSize: 24,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
+  } : {
+    display: 'none'
   },
   link: {
     display: 'flex',
@@ -37,7 +40,8 @@ export default props => {
     currentPage,
     pageLinks
   } = props;
-  const classes = useStyles();
+  const matches = useMediaQuery('(min-width: 1024px)');
+  const classes = useStyles({ matches });
 
   return (
     <div className={classes.root}>
