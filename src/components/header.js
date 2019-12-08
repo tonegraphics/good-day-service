@@ -14,10 +14,10 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 32,
   },
   header: {
-    height: props => (props.matches ? 108 : 66),
-    padding: props => (props.matches ? '0 32px 16px' : '0 16px 12px'),
+    padding: props => (props.matches ? '8px 32px 0' : '4px 16px 0'),
     backgroundColor: colors.yellow,
     display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
@@ -29,11 +29,12 @@ const useStyles = makeStyles(theme => ({
   },
   logo: props => ({
     height: props.matches ? 56 : 32,
+    marginBottom: 16,
   }),
   logoText: props => ({
     fontSize: fonts(props.matches).headerText,
-    marginBottom: 0,
-    lineHeight: '1.25rem',
+    margin: '0 0 0 4px',
+    lineHeight: '1rem',
   }),
   hero: {
     width: '100vw',
@@ -58,7 +59,7 @@ export default props => {
         <HeaderMenu
           currentPage={currentPage}
           pageLinks={pageLinks}
-          isApeared={matches}
+          matches={matches}
         />
       </header>
       {currentPage.toString() === '/' && (

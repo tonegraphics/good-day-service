@@ -2,25 +2,19 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Link } from 'gatsby'
 import { colors } from 'libs/colors'
+import { fonts } from 'libs/fonts'
 
 const useStyles = makeStyles(theme => ({
-  root: props =>
-    props.isApeared
-      ? {
-          fontSize: 24,
-          display: 'flex',
-          justifyContent: 'space-between',
-        }
-      : {
-          display: 'none',
-        },
-  link: {
+  root: {
+    marginBottom: props => (props.matches ? 16 : 8),
+    width: props => (props.matches ? 488 : 368),
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+  },
+  link: {
     fontWeight: 'bold',
-    width: 120,
-    marginLeft: 24,
-    padding: 8,
+    fontSize: props => fonts(props.matches).body,
+    padding: '8px',
   },
   current: {
     color: colors.yellow,
@@ -34,14 +28,15 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
-  const { currentPage, pageLinks, isApeared } = props
+  const { currentPage, pageLinks, matches } = props
 
-  const classes = useStyles({ isApeared })
+  const classes = useStyles({ matches })
 
   return (
     <div className={classes.root}>
       {pageLinks.map(link => (
         <Link
+          key={link.to}
           to={link.to}
           className={
             link.to === currentPage.toString()
