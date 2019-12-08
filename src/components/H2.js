@@ -7,13 +7,10 @@ import { useMediaQuery } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   title: props => ({
     color: colors.brown,
-    fontSize: fonts(props.matches).headline,
-    borderBottom: `6px solid ${colors.red}`,
-    marginBottom: '16px',
+    fontSize: fonts(props.matches).h2,
+    borderBottom: `4px solid ${colors.red}`,
+    marginBottom: 16,
     display: 'inline-block',
-    '&:first-letter': {
-      fontSize: fonts(props.matches).firstLetter,
-    },
   }),
 }))
 
@@ -22,7 +19,7 @@ export default props => {
   const classes = useStyles({ matches })
   return (
     <div>
-      <h1 className={classes.title}>{props.children}</h1>
+      <h2 className={classes.title}>{props.children}</h2>
     </div>
   )
 }

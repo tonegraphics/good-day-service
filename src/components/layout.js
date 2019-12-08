@@ -1,13 +1,14 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "components/Header"
-import "./layout.css"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import './layout.css'
 
 const pageLinks = [
-  { to: '/',         title: 'トップ' },
+  { to: '/', title: 'トップ' },
   { to: '/services', title: 'サービス' },
-  { to: '/access',   title: 'アクセス' },
-  { to: '/company',  title: '会社概要' }
+  { to: '/access', title: 'アクセス' },
+  { to: '/company', title: '会社概要' },
 ]
 
 export default ({ children, page }) => {
@@ -23,10 +24,7 @@ export default ({ children, page }) => {
 
   return (
     <>
-      <Header
-        pageLinks={pageLinks}
-        currentPage={page}
-      />
+      <Header pageLinks={pageLinks} currentPage={page} />
       <div
         style={{
           margin: `0 auto 40px`,
@@ -36,12 +34,8 @@ export default ({ children, page }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+      <Footer />
     </>
   )
 }
