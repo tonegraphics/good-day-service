@@ -9,8 +9,8 @@ import { fonts } from 'libs/fonts'
 
 const useStyles = makeStyles(theme => ({
   header: {
-    height: props => (props.matches ? 108 : 90),
-    padding: '0 0 16px',
+    height: props => (props.matches ? 108 : 66),
+    paddingBottom: props => (props.matches ? 16 : 12),
     paddingLeft: props => (props.matches ? 32 : 16),
     backgroundColor: colors.yellow,
     display: 'flex',
@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: fonts(props.matches).headerText,
     margin: 0,
     textAlign: 'center',
+    lineHeight: '1rem',
   }),
   hero: {
     width: '100vw',
@@ -52,8 +53,8 @@ export default props => {
                     width: 325.08,
                   }
                 : {
-                    height: 40,
-                    width: 232.2,
+                    height: 32,
+                    width: 185.76,
                   }
             }
           />
