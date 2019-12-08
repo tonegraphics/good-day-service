@@ -6,29 +6,36 @@ import Image from 'components/Image'
 import HeaderMenu from 'components/HeaderMenu'
 import { colors } from 'libs/colors'
 import { fonts } from 'libs/fonts'
+import Logo from 'assets/logo.svg'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    marginBottom: 32,
+  },
   header: {
     height: props => (props.matches ? 108 : 66),
-    paddingBottom: props => (props.matches ? 16 : 12),
-    paddingLeft: props => (props.matches ? 32 : 16),
+    padding: props => (props.matches ? '0 32px 16px' : '0 16px 12px'),
     backgroundColor: colors.yellow,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
-  logo: {
+  logoWrapper: {
     color: colors.brown,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
   },
+  logo: props => ({
+    height: props.matches ? 56 : 32,
+  }),
   logoText: props => ({
     fontSize: fonts(props.matches).headerText,
-    margin: 0,
-    textAlign: 'center',
-    lineHeight: '1rem',
+    marginBottom: 0,
+    lineHeight: '1.25rem',
   }),
   hero: {
     width: '100vw',
-    marginBottom: 32,
   },
 }))
 
@@ -40,24 +47,11 @@ export default props => {
   return (
     <div className={classes.root}>
       <header className={classes.header}>
-        <Link to="/" className={classes.logo}>
+        <Link to="/" className={classes.logoWrapper}>
           <p className={classes.logoText}>
             高齢者・障がい者・障がい児多世代通所型(共生型)
           </p>
-          <Image
-            filename="logo.png"
-            style={
-              matches
-                ? {
-                    height: 56,
-                    width: 325.08,
-                  }
-                : {
-                    height: 32,
-                    width: 185.76,
-                  }
-            }
-          />
+          <Logo className={classes.logo} />
         </Link>
         <HeaderMenu
           currentPage={currentPage}

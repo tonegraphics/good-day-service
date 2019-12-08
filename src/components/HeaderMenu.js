@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme => ({
   root: props =>
     props.isApeared
       ? {
-          paddingRight: 40,
           fontSize: 24,
           display: 'flex',
           justifyContent: 'space-between',
