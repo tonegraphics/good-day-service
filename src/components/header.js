@@ -7,6 +7,7 @@ import HeaderMenu from 'components/HeaderMenu'
 import { colors } from 'libs/colors'
 import { fonts } from 'libs/fonts'
 import Logo from 'assets/logo.svg'
+import Identity from 'components/Identity'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +37,7 @@ const useStyles = makeStyles(theme => ({
   }),
   hero: {
     width: '100vw',
+    position: 'relative',
   },
 }))
 
@@ -61,6 +63,7 @@ export default props => {
       </header>
       {currentPage.toString() === '/' && (
         <div className={classes.hero}>
+          <Identity />
           <Image
             filename="top_image.jpg"
             style={{
