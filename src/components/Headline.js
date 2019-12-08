@@ -1,22 +1,25 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import { colors } from 'libs/colors'
+import { fonts } from 'libs/fonts'
+import { useMediaQuery } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
-  title: {
+  title: props => ({
     color: colors.brown,
-    fontSize: '40px',
+    fontSize: fonts(props.matches).headline,
     borderBottom: `6px solid ${colors.red}`,
     marginBottom: '16px',
     display: 'inline-block',
     '&:first-letter': {
-      fontSize: '56px',
+      fontSize: fonts(props.matches).firstLetter,
     },
-  },
+  }),
 }))
 
 export default props => {
-  const classes = useStyles()
+  const matches = useMediaQuery('(min-width: 1024px)')
+  const classes = useStyles({ matches })
   return (
     <div>
       <h1 className={classes.title}>{props.children}</h1>
