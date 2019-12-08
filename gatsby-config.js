@@ -35,9 +35,18 @@ module.exports = {
         src: path.join(__dirname, 'src'),
         components: path.join(__dirname, 'src/components/'),
         libs: path.join(__dirname, 'src/libs/'),
-        pages: path.join(__dirname, 'src/pages')
-      }
-    }
+        pages: path.join(__dirname, 'src/pages'),
+        assets: path.join(__dirname, 'src/assets'),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
