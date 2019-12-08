@@ -2,12 +2,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Link } from 'gatsby';
 import { colors } from 'libs/colors';
-import { useMediaQuery } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({　
-  root: props => props.matches ? {
+  root: props => props.isApeared ? {
     height: 76,
-    paddingRight: 64,
+    paddingRight: 40,
     fontSize: 24,
     display: 'flex',
     justifyContent: 'space-between',
@@ -21,7 +20,7 @@ const useStyles = makeStyles(theme => ({　
     fontWeight: 'bold',
     textDecoration: 'none',
     width: 120,
-    marginLeft: 32,
+    marginLeft: 24,
     padding: 8
   },
   current: {
@@ -38,10 +37,11 @@ const useStyles = makeStyles(theme => ({　
 export default props => {
   const {
     currentPage,
-    pageLinks
+    pageLinks,
+    isApeared
   } = props;
-  const matches = useMediaQuery('(min-width: 1024px)');
-  const classes = useStyles({ matches });
+  
+  const classes = useStyles({ isApeared });
 
   return (
     <div className={classes.root}>
