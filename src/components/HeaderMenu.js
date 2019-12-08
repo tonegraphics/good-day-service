@@ -3,14 +3,16 @@ import { makeStyles } from '@material-ui/styles';
 import { Link } from 'gatsby';
 import { colors } from 'libs/colors';
 
-const useStyles = makeStyles(theme => ({
-  root: {
+const useStyles = makeStyles(theme => ({　
+  root: props => props.isApeared ? {
     height: 76,
-    paddingRight: 64,
+    paddingRight: 40,
     fontSize: 24,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
+  } : {
+    display: 'none'
   },
   link: {
     display: 'flex',
@@ -18,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'bold',
     textDecoration: 'none',
     width: 120,
-    marginLeft: 32,
+    marginLeft: 24,
     padding: 8
   },
   current: {
@@ -35,9 +37,11 @@ const useStyles = makeStyles(theme => ({
 export default props => {
   const {
     currentPage,
-    pageLinks
+    pageLinks,
+    isApeared
   } = props;
-  const classes = useStyles();
+  
+  const classes = useStyles({ isApeared });
 
   return (
     <div className={classes.root}>

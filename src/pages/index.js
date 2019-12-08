@@ -7,8 +7,7 @@ import { colors } from "libs/colors";
 
 const useStyles = makeStyles(theme => ({
   title: {
-    color: colors.black,
-    backgroundColor: colors.white
+    color: colors.black
   }
 }));
 

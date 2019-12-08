@@ -15,6 +15,9 @@ export default props => (
                 sizes(maxWidth: 600) {
                   ...GatsbyImageSharpSizes
                 }
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
@@ -28,12 +31,14 @@ export default props => (
       });
       if (!image) { return null; }
 
-      const imageSizes = image.node.childImageSharp.sizes;
+      // const imageSizes = image.node.childImageSharp.sizes;
+      const fluid = image.node.childImageSharp.fluid;
       return (
         <Img
           alt={props.alt}
-          sizes={imageSizes}
-          style={{ margin: 0 }}
+          fluid={fluid}
+          // sizes={imageSizes}
+          style={props.style}
         />
       );
     }}
