@@ -8,9 +8,9 @@ import { colors } from 'libs/colors';
 
 const useStyles = makeStyles(theme => ({
   header: {
-    height: 144,
+    height: props => props.matches ? 144 : 90,
     padding: 0,
-    paddingLeft: 32,
+    paddingLeft: props => props.matches ? 32 : 16,
     backgroundColor: colors.yellow,
     display: 'flex',
     justifyContent: 'space-between',
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 24,
   } : {
     margin: '0 0 4px 0',
-    fontSize: 14,
+    fontSize: 12,
   },
   hero: {
     width: '100vw',
