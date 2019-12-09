@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+// import { useStaticQuery, graphql } from 'gatsby'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import './layout.css'
@@ -12,15 +12,15 @@ const pageLinks = [
 ]
 
 export default ({ children, page }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>

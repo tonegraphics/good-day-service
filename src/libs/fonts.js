@@ -1,17 +1,15 @@
-export const fonts = desktop =>
-  desktop
+export const fonts = isDesktop =>
+  isDesktop
     ? {
-        h1: 40,
-        firstLetter: 56,
-        h2: 32,
+        headline: 32,
+        firstLetter: 40,
         body: 24,
         headerText: 14,
         identity: 32,
       }
     : {
-        h1: 32,
-        firstLetter: 40,
-        h2: 24,
+        headline: 24,
+        firstLetter: 32,
         body: 16,
         headerText: 10,
         identity: 16,

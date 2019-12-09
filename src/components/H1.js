@@ -7,7 +7,7 @@ import { useMediaQuery } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   title: props => ({
     color: colors.brown,
-    fontSize: fonts(props.matches).h1,
+    fontSize: fonts(props.matches).headline,
     borderBottom: `6px solid ${colors.red}`,
     marginBottom: '16px',
     display: 'inline-block',
