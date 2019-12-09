@@ -49,7 +49,7 @@ export default props => {
 
   return (
     <div className={classes.root}>
-      <header className={classes.header}>
+      <header className={classes.header} id="back-to-top-anchor">
         <Link to="/" className={classes.logoWrapper}>
           <p className={classes.logoText}>
             高齢者・障がい者・障がい児多世代通所型(共生型)

@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import './layout.css'
+import ScrollTop from 'components/ScrollTop'
 
 const pageLinks = [
   { to: '/', title: 'トップ' },
@@ -35,6 +36,7 @@ export default ({ children, page }) => {
       >
         <main>{children}</main>
       </div>
+      <ScrollTop />
       <Footer />
     </>
   )
