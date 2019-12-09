@@ -7,6 +7,7 @@ import { colors } from 'libs/colors'
 
 import H1 from 'components/H1'
 import H2 from 'components/H2'
+import Container from 'components/Container'
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -14,15 +15,16 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function() {
+export default () => {
   const classes = useStyles()
 
   return (
     <Layout page="/">
       <SEO title="Home" />
-      <H1>グッドデイサービス</H1>
-      <H2>特徴</H2>
-      <Link to="/services">サービスについてはこちら</Link>
+      <Container>
+        <H1>グッドデイサービス</H1>
+        <H2>特徴</H2>
+      </Container>
     </Layout>
   )
 }
