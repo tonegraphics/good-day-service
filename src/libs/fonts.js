@@ -1,17 +1,17 @@
 export const fonts = desktop =>
   desktop
     ? {
-        headline: 40,
+        h1: 40,
         firstLetter: 56,
-        subHeadline: 32,
+        h2: 32,
         body: 24,
         headerText: 14,
         identity: 32,
       }
     : {
-        headline: 32,
+        h1: 32,
         firstLetter: 40,
-        subHeadline: 24,
+        h2: 24,
         body: 16,
         headerText: 10,
         identity: 16,

@@ -5,7 +5,7 @@ import { colors } from 'libs/colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: props => (props.matches ? 16 : 8),
+    margin: props => (props.matches ? '0 16px 40px' : '0 8px 40px'),
     padding: props => (props.matches ? '16px 16px 40px' : '16px 8px 40px'),
     backgroundColor: colors.white,
     borderRadius: 10,

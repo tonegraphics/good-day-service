@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function() {
+export default () => {
   const classes = useStyles()
 
   return (
@@ -24,7 +24,6 @@ export default function() {
       <Container>
         <H1>グッドデイサービス</H1>
         <H2>特徴</H2>
-        <Link to="/services">サービスについてはこちら</Link>
       </Container>
     </Layout>
   )

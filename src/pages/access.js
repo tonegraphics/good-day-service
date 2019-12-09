@@ -1,14 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 import Layout from 'components/layout'
-import SEO from "components/seo"
+import SEO from 'components/seo'
+import Container from 'components/Container'
+import H1 from 'components/H1'
 
-export default function () {
+export default () => {
   return (
-    <Layout page='/access'>
+    <Layout page="/access">
       <SEO title="Access" />
-      <h1>アクセスページです。</h1>
-      <Link to="/company">会社概要へ</Link>
+      <Container>
+        <H1>アクセス</H1>
+      </Container>
     </Layout>
-  );
+  )
 }
