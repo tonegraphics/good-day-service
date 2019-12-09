@@ -10,7 +10,7 @@ import FooterContents from 'components/FooterContents'
 const useStyles = makeStyles(theme => ({
   caption: props => ({
     color: colors.brown,
-    fontSize: fonts(props.matches).h2,
+    fontSize: fonts(props.matches).headline,
     textAlign: 'center',
     marginBottom: 8,
   }),

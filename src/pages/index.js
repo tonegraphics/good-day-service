@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { makeStyles } from '@material-ui/core'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
@@ -22,7 +21,7 @@ export default () => {
     <Layout page="/">
       <SEO title="Home" />
       <Container>
-        <H1>グッドデイサービス</H1>
+        <H1>グッドデイサービスについて</H1>
         <H2>特徴</H2>
       </Container>
     </Layout>
