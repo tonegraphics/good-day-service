@@ -26,10 +26,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    transition: 'color 0.3s ease-in-out',
-    '&:hover': {
-      color: colors.red,
-    },
   },
   logo: props => ({
     fill: colors.brown,
