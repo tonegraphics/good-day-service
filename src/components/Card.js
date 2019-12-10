@@ -5,24 +5,25 @@ import H2 from 'components/H2'
 import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
-  root: {},
-  image: {},
-  text: {},
+  root: {
+    marginBottom: 40,
+  },
 }))
 
 export default props => {
-  const { title, imageSrc, children } = props
+  const { title, imageSrc, isWide, children } = props
   const classes = useStyles()
+  const itemWidth = isWide ? 6 : 12
 
   return (
     <div className={classes.root}>
       <H2>{title}</H2>
-      <Grid container spacing={2} className={classes.content}>
-        <Grid item xs={6} className={classes.image}>
-          <Image filename={imageSrc} />
-        </Grid>
-        <Grid item xs={6} className={classes.text}>
+      <Grid container spacing={2} direction={isWide ? 'row-reverse' : 'row'}>
+        <Grid item xs={itemWidth}>
           {children}
+        </Grid>
+        <Grid item xs={itemWidth}>
+          <Image filename={imageSrc} />
         </Grid>
       </Grid>
     </div>

@@ -11,7 +11,9 @@ import { fonts } from 'libs/fonts'
 const useStyles = makeStyles(theme => ({
   body: {
     fontSize: props => fonts(props.matches).body,
+    lineHeight: '32px',
     whiteSpace: 'pre-line',
+    margin: 0,
   },
 }))
 
@@ -46,7 +48,11 @@ export default () => {
       <Container>
         <H1>グッドデイサービスについて</H1>
         {cardContents.map(content => (
-          <Card title={content.title} imageSrc={content.imageSrc}>
+          <Card
+            title={content.title}
+            imageSrc={content.imageSrc}
+            isWide={matches}
+          >
             <p className={classes.body}>{content.text}</p>
           </Card>
         ))}
