@@ -6,7 +6,7 @@ import H2 from 'components/H2'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginBottom: props => (props.isSub ? 8 : 48),
+    marginBottom: props => (props.isSub ? 24 : 56),
   },
 }))
 
