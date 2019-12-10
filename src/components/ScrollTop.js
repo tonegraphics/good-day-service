@@ -1,12 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import {
-  Zoom,
-  Fab,
-  Slide,
-  useScrollTrigger,
-  useMediaQuery,
-} from '@material-ui/core'
+import { Zoom, useScrollTrigger, useMediaQuery } from '@material-ui/core'
 import Image from 'components/Image'
 
 const useStyles = makeStyles(theme => ({
