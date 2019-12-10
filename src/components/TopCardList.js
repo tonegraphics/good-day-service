@@ -1,16 +1,5 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
 import Card from 'components/Card'
-import { fonts } from 'libs/fonts'
-
-const useStyles = makeStyles(theme => ({
-  body: {
-    fontSize: props => fonts(props.isDesktop).body,
-    lineHeight: '32px',
-    whiteSpace: 'pre-line',
-    margin: 0,
-  },
-}))
 
 const cardContents = [
   {
@@ -33,8 +22,7 @@ const cardContents = [
   },
 ]
 
-export default ({ isDesktop }) => {
-  const classes = useStyles({ isDesktop })
+export default ({ classes, isDesktop }) => {
   return cardContents.map(content => (
     <Card title={content.title} imageSrc={content.imageSrc} isWide={isDesktop}>
       <p className={classes.body}>{content.text}</p>
