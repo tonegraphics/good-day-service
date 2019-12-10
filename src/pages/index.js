@@ -6,8 +6,9 @@ import SEO from 'components/seo'
 import H1 from 'components/H1'
 import Container from 'components/Container'
 import TopCardList from 'components/TopCardList'
-import TopSubCardList from '../components/TopSubCardList'
+import TopSubCardList from 'components/TopSubCardList'
 import { fonts } from 'libs/fonts'
+import Introduction from 'components/Introduction'
 
 const useStyles = makeStyles(theme => ({
   body: {
@@ -17,9 +18,6 @@ const useStyles = makeStyles(theme => ({
     margin: 0,
   },
   subCard: {
-    padding: 0,
-  },
-  subCardBody: {
     height: props => (props.isDesktop ? 64 : 'auto'),
   },
 }))
@@ -33,6 +31,7 @@ export default () => {
       <SEO title="Home" />
       <Container>
         <H1>グッドデイサービスについて</H1>
+        <Introduction {...{ isDesktop }} />
         <TopCardList {...{ classes, isDesktop }} />
         <TopSubCardList {...{ classes, isDesktop }} />
       </Container>

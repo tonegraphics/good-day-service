@@ -30,14 +30,9 @@ export default ({ classes, isDesktop }) => {
   return (
     <Grid container spacing={5}>
       {subCardContents.map(content => (
-        <Grid
-          item
-          xs={isDesktop ? 6 : 12}
-          spacing={0}
-          className={classes.subCard}
-        >
+        <Grid item xs={isDesktop ? 6 : 12} spacing={0}>
           <Card title={content.title} imageSrc={content.imageSrc} isSub>
-            <p className={classes.body + ' ' + classes.subCardBody}>
+            <p className={classes.body + ' ' + classes.subCard}>
               {content.text}
             </p>
           </Card>
