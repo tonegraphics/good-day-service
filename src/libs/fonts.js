@@ -3,7 +3,7 @@ export const fonts = isDesktop =>
     ? {
         headline: 32,
         firstLetter: 40,
-        body: 24,
+        body: 20,
         headerText: 14,
         identity: 32,
       }

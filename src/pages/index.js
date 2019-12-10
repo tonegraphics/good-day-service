@@ -1,28 +1,39 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/styles'
+import { useMediaQuery } from '@material-ui/core'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
-// import { makeStyles } from '@material-ui/core'
-// import { colors } from 'libs/colors'
-
 import H1 from 'components/H1'
-import H2 from 'components/H2'
 import Container from 'components/Container'
+import TopCardList from 'components/TopCardList'
+import TopSubCardList from 'components/TopSubCardList'
+import { fonts } from 'libs/fonts'
+import Introduction from 'components/Introduction'
 
-// const useStyles = makeStyles(theme => ({
-//   title: {
-//     color: colors.black,
-//   },
-// }))
+const useStyles = makeStyles(theme => ({
+  body: {
+    fontSize: props => fonts(props.isDesktop).body,
+    lineHeight: '32px',
+    whiteSpace: 'pre-line',
+    margin: 0,
+  },
+  subCard: {
+    height: props => (props.isDesktop ? 64 : 'auto'),
+  },
+}))
 
 export default () => {
-  // const classes = useStyles()
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const classes = useStyles({ isDesktop })
 
   return (
     <Layout page="/">
       <SEO title="Home" />
       <Container>
         <H1>グッドデイサービスについて</H1>
-        <H2>特徴</H2>
+        <Introduction {...{ isDesktop }} />
+        <TopCardList {...{ classes, isDesktop }} />
+        <TopSubCardList {...{ classes, isDesktop }} />
       </Container>
     </Layout>
   )
