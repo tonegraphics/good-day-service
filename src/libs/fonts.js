@@ -6,6 +6,7 @@ export const fonts = isDesktop =>
         body: 24,
         headerText: 14,
         identity: 32,
+        table: 20,
       }
     : {
         headline: 24,
@@ -13,4 +14,5 @@ export const fonts = isDesktop =>
         body: 16,
         headerText: 10,
         identity: 16,
+        table: 14,
       }
