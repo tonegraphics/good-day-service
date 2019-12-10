@@ -17,9 +17,9 @@ const useStyles = makeStyles(theme => ({
     cursor: 'pointer',
     padding: '16px',
     display: 'block',
+    transition: '0.3s',
     '&:hover': {
-      backgroundColor: colors.brown,
-      transition: '0.3s',
+      opacity: 0.7,
     },
   },
 }))

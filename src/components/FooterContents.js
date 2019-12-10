@@ -35,6 +35,10 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     textDecoration: 'underline',
     marginBottom: 20,
+    transition: '0.3s ease-in-out',
+    '&:hover': {
+      color: colors.red,
+    },
   }),
 }))
 

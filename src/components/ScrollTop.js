@@ -14,6 +14,11 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     bottom: props => (props.matches ? 40 : 24),
     right: props => (props.matches ? 16 : 8),
+    transition: '0.3s',
+    '&:hover': {
+      cursor: 'pointer',
+      opacity: 0.7,
+    },
   },
 }))
 
