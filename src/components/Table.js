@@ -1,13 +1,5 @@
 import React from 'react'
-import {
-  makeStyles,
-  useMediaQuery,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-} from '@material-ui/core'
-import { colors } from 'libs/colors'
+import { makeStyles, useMediaQuery } from '@material-ui/core'
 import { fonts } from 'libs/fonts'
 
 const useStyles = makeStyles(theme => ({
