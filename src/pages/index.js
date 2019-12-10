@@ -7,10 +7,11 @@ import H1 from 'components/H1'
 import Container from 'components/Container'
 import Card from 'components/Card'
 import { fonts } from 'libs/fonts'
+import TopCardList from 'components/TopCardList'
 
 const useStyles = makeStyles(theme => ({
   body: {
-    fontSize: props => fonts(props.matches).body,
+    fontSize: props => fonts(props.isDesktop).body,
     lineHeight: '32px',
     whiteSpace: 'pre-line',
     margin: 0,
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
   },
   subCardBody: {
-    height: props => (props.matches ? 64 : 'auto'),
+    height: props => (props.isDesktop ? 64 : 'auto'),
   },
 }))
 
@@ -69,28 +70,20 @@ const subCardContents = [
 ]
 
 export default () => {
-  const matches = useMediaQuery('(min-width: 1024px)')
-  const classes = useStyles({ matches })
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const classes = useStyles({ isDesktop })
 
   return (
     <Layout page="/">
       <SEO title="Home" />
       <Container>
         <H1>グッドデイサービスについて</H1>
-        {cardContents.map(content => (
-          <Card
-            title={content.title}
-            imageSrc={content.imageSrc}
-            isWide={matches}
-          >
-            <p className={classes.body}>{content.text}</p>
-          </Card>
-        ))}
+        <TopCardList isDesktop={isDesktop} />
         <Grid container spacing={5}>
           {subCardContents.map(content => (
             <Grid
               item
-              xs={matches ? 6 : 12}
+              xs={isDesktop ? 6 : 12}
               spacing={0}
               className={classes.subCard}
             >
