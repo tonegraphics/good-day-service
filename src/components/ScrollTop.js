@@ -1,12 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import {
-  Zoom,
-  Fab,
-  Slide,
-  useScrollTrigger,
-  useMediaQuery,
-} from '@material-ui/core'
+import { Zoom, useScrollTrigger, useMediaQuery } from '@material-ui/core'
 import Image from 'components/Image'
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +8,11 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     bottom: props => (props.matches ? 40 : 24),
     right: props => (props.matches ? 16 : 8),
+    transition: '0.3s',
+    '&:hover': {
+      cursor: 'pointer',
+      opacity: 0.7,
+    },
   },
 }))
 

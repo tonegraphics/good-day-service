@@ -24,6 +24,10 @@ const useStyles = makeStyles(theme => ({
   other: {
     color: colors.brown,
     backgroundColor: colors.yellow,
+    transition: 'all 0.3s ease-in-out',
+    '&:hover': {
+      color: colors.red,
+    },
   },
 }))
 

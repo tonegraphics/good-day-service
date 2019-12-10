@@ -28,8 +28,13 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'flex-start',
   },
   logo: props => ({
+    fill: colors.brown,
     height: props.matches ? 56 : 32,
     marginBottom: 16,
+    transition: 'fill 0.3s ease-in-out',
+    '&:hover': {
+      fill: colors.red,
+    },
   }),
   logoText: props => ({
     fontSize: fonts(props.matches).headerText,

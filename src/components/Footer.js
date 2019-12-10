@@ -10,12 +10,11 @@ import FooterContents from 'components/FooterContents'
 const useStyles = makeStyles(theme => ({
   caption: props => ({
     color: colors.brown,
-    fontSize: fonts(props.matches).headline,
+    fontSize: fonts(props.matches).body,
     textAlign: 'center',
     marginBottom: 8,
   }),
   footer: {
-    // height: 360,
     backgroundColor: colors.brown,
     display: 'flex',
     alignItems: 'center',
