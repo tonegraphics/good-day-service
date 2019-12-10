@@ -1,23 +1,25 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
+import { Grid } from '@material-ui/core'
 import Image from 'components/Image'
 import H2 from 'components/H2'
-import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginBottom: 40,
+    marginBottom: props => (props.isSub ? 8 : 48),
   },
 }))
 
 export default props => {
-  const { title, imageSrc, isWide, children } = props
-  const classes = useStyles()
-  const itemWidth = isWide ? 6 : 12
+  const { title, imageSrc, isWide, isSub, children } = props
+  const classes = useStyles({ isSub })
+  const itemWidth = isSub || !isWide ? 12 : 6
 
   return (
     <div className={classes.root}>
       <H2>{title}</H2>
+      {/* spacing={1} が 8px に相当. */}
+      {/* makeStyles に自分で定義した theme の内容で spacing のサイズを調整できるっぽい */}
       <Grid container spacing={2} direction={isWide ? 'row-reverse' : 'row'}>
         <Grid item xs={itemWidth}>
           {children}

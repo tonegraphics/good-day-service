@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import { useMediaQuery } from '@material-ui/core'
+import { useMediaQuery, Grid } from '@material-ui/core'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
 import H1 from 'components/H1'
@@ -14,6 +14,12 @@ const useStyles = makeStyles(theme => ({
     lineHeight: '32px',
     whiteSpace: 'pre-line',
     margin: 0,
+  },
+  subCard: {
+    padding: 0,
+  },
+  subCardBody: {
+    height: props => (props.matches ? 64 : 'auto'),
   },
 }))
 
@@ -38,6 +44,30 @@ const cardContents = [
   },
 ]
 
+const subCardContents = [
+  {
+    title: '静養室',
+    text: '風通しもよく、居心地の良い空間となっております。',
+    imageSrc: 'seiyou.JPG',
+  },
+  {
+    title: 'お風呂',
+    text: '家庭用の浴槽が2つあります。',
+    imageSrc: 'bath.JPG',
+  },
+  {
+    title: '相談室',
+    text: 'プライバシーに配慮しています。',
+    imageSrc: 'soudan.JPG',
+  },
+  {
+    title: 'トイレ',
+    text:
+      '広々としたトイレが2カ所あり、車椅子の方でも安心してご利用いただけます。',
+    imageSrc: 'toilet.png',
+  },
+]
+
 export default () => {
   const matches = useMediaQuery('(min-width: 1024px)')
   const classes = useStyles({ matches })
@@ -56,6 +86,22 @@ export default () => {
             <p className={classes.body}>{content.text}</p>
           </Card>
         ))}
+        <Grid container spacing={5}>
+          {subCardContents.map(content => (
+            <Grid
+              item
+              xs={matches ? 6 : 12}
+              spacing={0}
+              className={classes.subCard}
+            >
+              <Card title={content.title} imageSrc={content.imageSrc} isSub>
+                <p className={classes.body + ' ' + classes.subCardBody}>
+                  {content.text}
+                </p>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Layout>
   )
