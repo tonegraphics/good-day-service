@@ -17,13 +17,13 @@ const useStyles = makeStyles(theme => ({
     padding: '8px',
   },
   current: {
-    color: colors.yellow,
-    backgroundColor: colors.brown,
+    color: colors.brown,
+    backgroundColor: colors.yellow,
     borderRadius: 10,
   },
   other: {
-    color: colors.brown,
-    backgroundColor: colors.yellow,
+    color: colors.yellow,
+    backgroundColor: colors.brown,
     transition: 'all 0.3s ease-in-out',
     '&:hover': {
       color: colors.red,
