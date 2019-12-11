@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     border: 0,
     fontSize: props => fonts(props.matches).table,
-    fontFamily: 'inherit',
   },
   title: {
     fontWeight: 'bold',
