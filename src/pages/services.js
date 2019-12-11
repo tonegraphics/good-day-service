@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => ({
   target: {
     whiteSpace: 'pre-line',
     fontSize: 16,
+    margin: 0,
   },
 }))
 
