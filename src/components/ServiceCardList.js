@@ -35,7 +35,10 @@ const cardContents = [
 export default ({ classes, isDesktop }) => {
   return cardContents.map(content => (
     <Card title={content.title} imageSrc={content.imageSrc} isWide={isDesktop}>
-      <p className={classes.body}>提供時間{`\n${content.offerTime}\n\n`}</p>
+      <p className={classes.body}>
+        提供時間
+        <span className={classes.bold}>{`\n${content.offerTime}\n\n`}</span>
+      </p>
       <p className={classes.body}>対象者{'\n'}</p>
       {typeof content.target === 'string' ? (
         <p className={classes.target + ' ' + classes.highlighter}>
