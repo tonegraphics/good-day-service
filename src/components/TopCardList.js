@@ -24,7 +24,12 @@ const cardContents = [
 
 export default ({ classes, isDesktop }) => {
   return cardContents.map(content => (
-    <Card title={content.title} imageSrc={content.imageSrc} isWide={isDesktop}>
+    <Card
+      key={content.title}
+      title={content.title}
+      imageSrc={content.imageSrc}
+      isWide={isDesktop}
+    >
       <p className={classes.body}>{content.text}</p>
     </Card>
   ))
