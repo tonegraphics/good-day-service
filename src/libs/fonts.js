@@ -7,6 +7,7 @@ export const fonts = isDesktop =>
         headerText: 14,
         identity: 32,
         table: 20,
+        companyName: 32,
       }
     : {
         headline: 32,
@@ -15,4 +16,5 @@ export const fonts = isDesktop =>
         headerText: 10,
         identity: 16,
         table: 14,
+        companyName: 28,
       }

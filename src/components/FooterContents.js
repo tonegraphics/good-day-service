@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     margin: '0 48px 32px 0',
   },
   companyName: props => ({
-    fontSize: fonts(props.matches).headline,
+    fontSize: fonts(props.matches).companyName,
     marginBottom: 8,
   }),
   address: {
