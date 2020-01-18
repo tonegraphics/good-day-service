@@ -9,6 +9,7 @@ const useStyles = makeStyles(theme => ({
     padding: props => (props.matches ? '16px 16px 40px' : '16px 8px 40px'),
     backgroundColor: colors.white,
     borderRadius: 10,
+    maxWidth: 992,
   },
 }))
 
