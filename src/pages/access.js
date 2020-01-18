@@ -26,9 +26,7 @@ export default () => {
           style="border:0;"
           allowfullscreen=""
         ></iframe> */}
-        <div style={{ width: 960, height: 2000 }}>
-          <AccessMap />
-        </div>
+        <AccessMap />
       </Container>
     </Layout>
   )
