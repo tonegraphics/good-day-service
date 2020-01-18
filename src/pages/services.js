@@ -9,9 +9,10 @@ import H2 from 'components/H2'
 import { fonts } from 'libs/fonts'
 import { colors } from 'libs/colors'
 import ServiceCardList from 'components/ServiceCardList'
-import KyouseiServiceCard from '../components/KyouseiServiceCard'
-import Topic from '../components/Topic'
-import Routine from '../components/Routine'
+import KyouseiServiceCard from 'components/KyouseiServiceCard'
+import Topic from 'components/Topic'
+import Routine from 'components/Routine'
+import Image from 'components/Image'
 
 const firstTopics = [
   {
@@ -101,11 +102,26 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     margin: 0,
   },
+  goodchanWrapper: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    margin: '24px 40px 0 0',
+  },
 }))
 
 export default function() {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
   const classes = useStyles({ isDesktop })
+
+  const goodChanstyle = isDesktop
+    ? {
+        width: 346,
+        height: 358,
+      }
+    : {
+        width: 230,
+        height: 240,
+      }
 
   return (
     <Layout page="/services">
@@ -192,6 +208,9 @@ export default function() {
           {'\n'}
         </p>
         <Routine {...{ classes, isDesktop }} />
+        <div className={classes.goodchanWrapper}>
+          <Image filename="goodchan5.png" style={goodChanstyle} />
+        </div>
       </Container>
     </Layout>
   )
