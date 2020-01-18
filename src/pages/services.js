@@ -91,6 +91,9 @@ const useStyles = makeStyles(theme => ({
   top: {
     marginBottom: 40,
   },
+  topic: {
+    marginBottom: 24,
+  },
   end: {
     display: 'flex',
     justifyContent: 'center',
@@ -156,7 +159,7 @@ export default function() {
       <Container>
         <H1>共生型サービスについて</H1>
         <KyouseiServiceCard {...{ classes, isDesktop }} />
-        <p className={classes.small}>
+        <p className={classes.small + ' ' + classes.top}>
           以降私たちは「
           <span className={classes.highlighter}>
             年齡・認知症や障がい等に関わらず、家族のような雰囲気
@@ -172,7 +175,7 @@ export default function() {
           」の開始も検討しております。
         </p>
         <H2>特徴</H2>
-        <p className={classes.small}>
+        <p className={classes.small + ' ' + classes.topic}>
           対象者ごとに施設を限定し、住宅地から離れた場所で提供されるような従来のデイサービスに対し、共生型(富山型)デイサービスは以下の3つをコンセプトに運営しております。
         </p>
         {firstTopics.map(t => (

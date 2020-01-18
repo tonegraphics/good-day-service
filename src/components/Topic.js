@@ -16,7 +16,7 @@ export default props => {
       >
         {title}
       </p>
-      <p className={classes.small}>{text}</p>
+      <p className={classes.small + ' ' + classes.topic}>{text}</p>
     </div>
   )
 }
