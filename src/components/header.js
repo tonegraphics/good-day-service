@@ -15,20 +15,20 @@ const useStyles = makeStyles(theme => ({
   },
   header: {
     padding: props => (props.matches ? '8px 32px 0' : '4px 16px 0'),
-    backgroundColor: colors.yellow,
+    backgroundColor: colors.brown,
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
   logoWrapper: {
-    color: colors.brown,
+    color: colors.yellow,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
   logo: props => ({
-    fill: colors.brown,
+    fill: colors.yellow,
     height: props.matches ? 56 : 32,
     marginBottom: 16,
     transition: 'fill 0.3s ease-in-out',

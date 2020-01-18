@@ -13,14 +13,14 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: props.matches ? 'center' : 'flex-start',
     alignItems: 'flex-start',
-    color: colors.white,
+    color: colors.yellow,
     padding: '32px 16px',
   }),
   company: {
     margin: '0 48px 32px 0',
   },
   companyName: props => ({
-    fontSize: fonts(props.matches).headline,
+    fontSize: fonts(props.matches).companyName,
     marginBottom: 8,
   }),
   address: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   link: props => ({
     fontSize: fonts(props.matches).body,
-    color: colors.white,
+    color: colors.yellow,
     display: 'block',
     textDecoration: 'underline',
     marginBottom: 20,
