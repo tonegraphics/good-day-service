@@ -4,6 +4,7 @@ import SEO from 'components/seo'
 import Container from 'components/Container'
 import H1 from 'components/H1'
 import Table from 'components/Table'
+import AccessMap from '../components/AccessMap'
 
 const rows = [
   { title: '住所', data: '〒820 - 0001\n福岡県飯塚市鯰田64番地1' },
@@ -25,6 +26,9 @@ export default () => {
           style="border:0;"
           allowfullscreen=""
         ></iframe> */}
+        <div style={{ width: 960, height: 2000 }}>
+          <AccessMap />
+        </div>
       </Container>
     </Layout>
   )
