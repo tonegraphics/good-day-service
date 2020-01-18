@@ -140,6 +140,7 @@ export default function() {
         </p>
         {firstTopics.map(t => (
           <Topic
+            key={t.title}
             classes={classes}
             title={t.title}
             text={t.text}
@@ -147,7 +148,12 @@ export default function() {
           />
         ))}
         {secondTopics.map(t => (
-          <Topic classes={classes} title={t.title} text={t.text} />
+          <Topic
+            key={t.title}
+            classes={classes}
+            title={t.title}
+            text={t.text}
+          />
         ))}
         <p className={classes.small}>
           全体としては、

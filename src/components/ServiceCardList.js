@@ -34,7 +34,12 @@ const cardContents = [
 
 export default ({ classes, isDesktop }) => {
   return cardContents.map(content => (
-    <Card title={content.title} imageSrc={content.imageSrc} isWide={isDesktop}>
+    <Card
+      key={content.title}
+      title={content.title}
+      imageSrc={content.imageSrc}
+      isWide={isDesktop}
+    >
       <p className={classes.body}>
         提供時間
         <span className={classes.bold}>{`\n${content.offerTime}\n\n`}</span>
@@ -46,7 +51,7 @@ export default ({ classes, isDesktop }) => {
         </p>
       ) : (
         content.target.map(t => (
-          <p className={classes.target}>
+          <p key={t.type} className={classes.target}>
             {`${t.type}:\n`}
             <span className={classes.highlighter}>{t.detail}</span>
           </p>
