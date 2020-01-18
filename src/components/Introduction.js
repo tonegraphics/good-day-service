@@ -45,10 +45,10 @@ export default ({ isDesktop }) => {
         <Grid item xs={isDesktop ? 9 : 12}>
           <p className={classes.body}>
             {
-              'グッドデイサービスは、福岡県飯塚市鯰田にある\n高齢者・障がい者・障がい'
+              'グッドデイサービスは、福岡県飯塚市鯰田にある\n高齢者・障がい者・障がい児'
             }
             <span className={classes.highlighter}>
-              児共生型福祉サービス事業所
+              共生型福祉サービス事業所
             </span>
             です。
           </p>
