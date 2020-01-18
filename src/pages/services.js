@@ -11,6 +11,7 @@ import { colors } from 'libs/colors'
 import ServiceCardList from 'components/ServiceCardList'
 import KyouseiServiceCard from '../components/KyouseiServiceCard'
 import Topic from '../components/Topic'
+import Routine from '../components/Routine'
 
 const firstTopics = [
   {
@@ -58,6 +59,9 @@ const useStyles = makeStyles(theme => ({
   brown: {
     color: colors.brown,
   },
+  red: {
+    color: colors.red,
+  },
   highlighter: {
     fontWeight: 'bold',
     color: colors.red,
@@ -65,6 +69,23 @@ const useStyles = makeStyles(theme => ({
   small: {
     fontSize: 16,
     lineHeight: '32px',
+    whiteSpace: 'pre-line',
+    margin: 0,
+  },
+  routine: {
+    fontSize: props => (props.isDesktop ? 32 : 24),
+    lineHeight: props => (props.isDesktop ? '40px' : '32px'),
+    fontWeight: 'bold',
+    color: colors.brown,
+    whiteSpace: 'pre-line',
+    marginBottom: 4,
+  },
+  caption: {
+    fontSize: props => (props.isDesktop ? 16 : 10),
+    lineHeight: props => (props.isDesktop ? '24px' : '14px'),
+    color: colors.red,
+    whiteSpace: 'pre-line',
+    margin: 0,
   },
   top: {
     marginBottom: 40,
@@ -162,6 +183,15 @@ export default function() {
           </span>
           など様々な利点があります。
         </p>
+      </Container>
+      <Container>
+        <H1>1日の流れ</H1>
+        <p className={classes.body}>
+          ※対象の方によって時間が異なります。{'\n'}
+          ※基本の流れですが、変更になる場合があります。{'\n'}
+          {'\n'}
+        </p>
+        <Routine {...{ classes, isDesktop }} />
       </Container>
     </Layout>
   )
