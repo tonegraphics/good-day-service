@@ -27,8 +27,8 @@ export default () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
   const classes = useStyles({ isDesktop })
   const goodChanfiles = [
+    'goodchan2.png',
     'goodchan1.jpg',
-    'goodchan2.jpg',
     'goodchan3.jpg',
     'goodchan4.jpg',
   ]
