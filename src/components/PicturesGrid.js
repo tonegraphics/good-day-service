@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core'
 
 export default props => {
   const { isDesktop, filenames } = props
-  const imgWidth = isDesktop ? 5 : 12
+  const imgWidth = isDesktop ? 6 : 12
 
   return (
     <Grid container spacing={4}>
