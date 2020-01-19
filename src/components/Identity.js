@@ -37,12 +37,12 @@ export default props => {
 
   const cloud2Style = isDesktop
     ? {
-        width: 265,
-        height: 175,
+        width: 266,
+        height: 176,
       }
     : {
-        width: 174,
-        height: 115,
+        width: 133,
+        height: 88,
       }
 
   return (
