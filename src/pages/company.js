@@ -5,6 +5,8 @@ import Container from 'components/Container'
 import H1 from 'components/H1'
 import H2 from 'components/H2'
 import Table from 'components/Table'
+import { useMediaQuery } from '@material-ui/core'
+import PicturesGrid from 'components/PicturesGrid'
 
 const companyRows = [
   { title: '法人名', data: 'GOOD ONE 株式会社' },
@@ -38,6 +40,8 @@ const relatedOfficeRows = [
 ]
 
 export default () => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const filenames = ['41plus1.jpg', '41plus2.jpg', '41plus3.jpg', '41plus4.jpg']
   return (
     <Layout page="/company">
       <SEO title="Company" />
@@ -56,6 +60,9 @@ export default () => {
           <strong>プランニングッド</strong>」併設!!
         </p>
         <Table rows={relatedOfficeRows} />
+        <H2>児童デイサービス「41プラス(仮)」建設中!</H2>
+        <strong>5/1 オープン予定!</strong>
+        <PicturesGrid {...{ isDesktop, filenames }} />
       </Container>
     </Layout>
   )
