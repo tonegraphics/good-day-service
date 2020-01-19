@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 32,
   },
   header: {
-    padding: props => (props.matches ? '8px 32px 0' : '4px 16px 0'),
+    padding: props => (props.isDesktop ? '8px 32px 0' : '4px 16px 0'),
     backgroundColor: colors.brown,
     display: 'flex',
     flexWrap: 'wrap',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: props => ({
     fill: colors.yellow,
-    height: props.matches ? 56 : 32,
+    height: props.isDesktop ? 56 : 32,
     marginBottom: 16,
     transition: 'fill 0.3s ease-in-out',
     '&:hover': {
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     },
   }),
   logoText: props => ({
-    fontSize: fonts(props.matches).headerText,
+    fontSize: fonts(props.isDesktop).headerText,
     margin: '0 0 0 4px',
     lineHeight: '1rem',
   }),
@@ -49,8 +49,13 @@ const useStyles = makeStyles(theme => ({
 
 export default props => {
   const { pageLinks, currentPage } = props
-  const matches = useMediaQuery('(min-width: 1024px)')
-  const classes = useStyles({ matches })
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const classes = useStyles({ isDesktop })
+
+  const heroStyle = {
+    height: isDesktop ? '80vh' : '40vh',
+    width: '100vw',
+  }
 
   return (
     <div className={classes.root}>
@@ -64,19 +69,13 @@ export default props => {
         <HeaderMenu
           currentPage={currentPage}
           pageLinks={pageLinks}
-          matches={matches}
+          isDesktop={isDesktop}
         />
       </header>
       {currentPage.toString() === '/' && (
         <div className={classes.hero}>
-          <Identity />
-          <Image
-            filename="top_image.jpg"
-            style={{
-              height: matches ? '80vh' : '40vh',
-              width: '100vw',
-            }}
-          />
+          <Identity {...{ isDesktop }} />
+          <Image filename="top_image.jpg" style={heroStyle} />
         </div>
       )}
     </div>
