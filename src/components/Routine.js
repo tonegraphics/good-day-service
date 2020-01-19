@@ -1,11 +1,10 @@
 import React from 'react'
 import RoutineWork from 'components/RoutineWork'
-import Image from 'components/Image'
-import { Grid } from '@material-ui/core'
+import PicturesGrid from 'components/PicturesGrid'
 
 export default props => {
   const { classes, isDesktop } = props
-  const imgWidth = isDesktop ? 5 : 12
+  const filenames = ['lunch1.JPG', 'lunch2.jpg']
 
   const routineContents = [
     {
@@ -38,14 +37,7 @@ export default props => {
             家庭で作るような手作りの昼食を皆さんと一緒にいただきます。{'\n'}
             ミキサー・きざみ・トロみ等もO Kです。一度、お問い合わせください。
           </p>
-          <Grid container spacing={4}>
-            <Grid item xs={imgWidth}>
-              <Image filename="lunch1.JPG" />
-            </Grid>
-            <Grid item xs={imgWidth}>
-              <Image filename="lunch2.jpg" />
-            </Grid>
-          </Grid>
+          <PicturesGrid isDesktop={isDesktop} filenames={filenames} />
         </div>
       ),
     },
