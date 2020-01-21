@@ -14,17 +14,12 @@ import ServiceIntro from 'components/ServiceIntro'
 import RoutineIntro from '../components/RoutineIntro'
 
 const useStyles = makeStyles(theme => ({
-  bold: { fontWeight: 'bold' },
-  brown: { color: colors.brown },
-  top: { marginBottom: 40 },
-  topic: { marginBottom: 24 },
   body: {
     fontSize: props => fonts(props.isDesktop).body,
     lineHeight: props => (props.isDesktop ? '32px' : '24px'),
     whiteSpace: 'pre-line',
     margin: 0,
   },
-  red: { color: colors.red },
   highlighter: {
     fontWeight: 'bold',
     color: colors.red,
@@ -35,6 +30,11 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'pre-line',
     margin: 0,
   },
+  bold: { fontWeight: 'bold' },
+  brown: { color: colors.brown },
+  red: { color: colors.red },
+  top: { marginBottom: 40 },
+  topic: { marginBottom: 24 },
   routine: {
     fontSize: props => (props.isDesktop ? 32 : 24),
     lineHeight: props => (props.isDesktop ? '40px' : '32px'),
