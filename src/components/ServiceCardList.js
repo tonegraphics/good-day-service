@@ -15,20 +15,20 @@ const cardContents = [
         detail: '18歳以上で障がい支援区分1~6の認定を受けた方',
       },
     ],
-    imageSrc: 'mainroom.JPG',
+    imageSrc: 'service1.jpeg',
   },
   {
     title: '放課後等デイサービス',
     offerTime: '平日(月~金)：15:30 ~ 17:30\n学休日(土・祝日)：9:30 ~ 16:30',
     target:
       '障がい等お持ちの主に6歳から18歳までの\n学校に通っている子で、通所給付受給者証をお持ちの方',
-    imageSrc: 'mainroom.JPG',
+    imageSrc: 'service2.jpeg',
   },
   {
     title: '児童発達支援',
     offerTime: '9:30 ~ 15:30',
     target: '障がい等お持ちの未就学の子で、\n通所給付受給者証をお持ちの方',
-    imageSrc: 'mainroom.JPG',
+    imageSrc: 'service3.jpeg',
   },
 ]
 
