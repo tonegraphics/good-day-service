@@ -38,7 +38,7 @@ export default props => {
   const { classes } = props
   return (
     <div>
-      <p className={classes.small + ' ' + classes.topic}>
+      <p className={classes.body + ' ' + classes.topic}>
         対象者ごとに施設を限定し、住宅地から離れた場所で提供されるような従来のデイサービスに対し、共生型(富山型)デイサービスは以下の3つをコンセプトに運営しております。
       </p>
       {firstTopics.map(t => (
@@ -53,7 +53,7 @@ export default props => {
       {secondTopics.map(t => (
         <Topic key={t.title} classes={classes} title={t.title} text={t.text} />
       ))}
-      <p className={classes.small}>
+      <p className={classes.body}>
         全体としては、
         <span className={classes.bold}>
           利用者を限定しないため一緒に過ごすことによる生活上の相乗効果があること

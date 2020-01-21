@@ -7,7 +7,7 @@ export default props => {
     <div>
       <p
         className={
-          classes.body +
+          classes.routine +
           ' ' +
           (isHighlighted
             ? classes.highlighter
@@ -16,7 +16,7 @@ export default props => {
       >
         {title}
       </p>
-      <p className={classes.small + ' ' + classes.topic}>{text}</p>
+      <p className={classes.body + ' ' + classes.topic}>{text}</p>
     </div>
   )
 }

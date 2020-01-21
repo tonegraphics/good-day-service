@@ -20,21 +20,6 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'pre-line',
     margin: 0,
   },
-  highlighter: {
-    fontWeight: 'bold',
-    color: colors.red,
-  },
-  small: {
-    fontSize: 16,
-    lineHeight: '32px',
-    whiteSpace: 'pre-line',
-    margin: 0,
-  },
-  bold: { fontWeight: 'bold' },
-  brown: { color: colors.brown },
-  red: { color: colors.red },
-  top: { marginBottom: 40 },
-  topic: { marginBottom: 24 },
   routine: {
     fontSize: props => (props.isDesktop ? 32 : 24),
     lineHeight: props => (props.isDesktop ? '40px' : '32px'),
@@ -58,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   target: {
     whiteSpace: 'pre-line',
-    fontSize: 16,
+    fontSize: props => fonts(props.isDesktop).table,
     margin: 0,
   },
   goodchanWrapper: {
@@ -66,6 +51,15 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-end',
     margin: '24px 40px 0 0',
   },
+  highlighter: {
+    fontWeight: 'bold',
+    color: colors.red,
+  },
+  bold: { fontWeight: 'bold' },
+  brown: { color: colors.brown },
+  red: { color: colors.red },
+  top: { marginBottom: 40 },
+  topic: { marginBottom: props => (props.isDesktop ? 40 : 24) },
 }))
 
 export default function() {

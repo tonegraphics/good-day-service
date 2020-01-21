@@ -6,7 +6,7 @@ export default props => {
   return (
     <div>
       <KyouseiServiceCard {...props} />
-      <p className={classes.small + ' ' + classes.top}>
+      <p className={classes.body + ' ' + classes.topic}>
         以降私たちは「
         <span className={classes.highlighter}>
           年齡・認知症や障がい等に関わらず、家族のような雰囲気
