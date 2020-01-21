@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     marginTop: props => (props.isDesktop ? 80 : 0),
     width: props => (props.isDesktop ? 'auto' : '100%'),
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
   },
 }))
 
