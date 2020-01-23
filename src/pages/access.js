@@ -3,7 +3,7 @@ import Layout from 'components/layout'
 import SEO from 'components/seo'
 import Container from 'components/Container'
 import H1 from 'components/H1'
-import Table from 'components/Table'
+import Table from 'components/common/Table'
 import AccessMap from '../components/AccessMap'
 
 const rows = [

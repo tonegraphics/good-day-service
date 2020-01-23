@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
   buttonWapper: {
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: '32px',
+    margin: '0 16px 32px',
   },
   button: {
     color: colors.white,
@@ -28,7 +28,7 @@ export default props => {
   const classes = useStyles()
   return (
     <div className={classes.buttonWapper}>
-      <a className={classes.button} href={props.link}>
+      <a className={classes.button} href={props.link} target={props.target}>
         {props.children}
       </a>
     </div>
