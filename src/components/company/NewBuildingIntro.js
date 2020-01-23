@@ -1,5 +1,5 @@
 import React from 'react'
-import PicturesGrid from 'components/PicturesGrid'
+import PicturesGrid from 'components/common/PicturesGrid'
 
 const filenames = ['41plus1.jpg', '41plus2.jpg', '41plus3.jpg', '41plus4.jpeg']
 

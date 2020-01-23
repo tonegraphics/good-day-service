@@ -3,9 +3,8 @@ import { makeStyles } from '@material-ui/styles'
 import { useMediaQuery } from '@material-ui/core'
 import { colors } from 'libs/colors'
 import { fonts } from 'libs/fonts'
-
-import Button from 'components/Button'
-import FooterContents from 'components/FooterContents'
+import Button from 'components/common/Button'
+import FooterContents from 'components/layouts/FooterContents'
 
 const useStyles = makeStyles(theme => ({
   caption: props => ({

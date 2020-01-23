@@ -1,5 +1,5 @@
 import React from 'react'
-import PicturesGrid from 'components/PicturesGrid'
+import PicturesGrid from 'components/common/PicturesGrid'
 
 export default props => {
   const { classes, isDesktop } = props

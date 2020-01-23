@@ -1,9 +1,9 @@
 import React from 'react'
 // import { useStaticQuery, graphql } from 'gatsby'
-import Header from 'components/Header'
-import Footer from 'components/Footer'
+import Header from 'components/layouts/Header'
+import Footer from 'components/layouts/Footer'
 import './layout.css'
-import ScrollTop from 'components/ScrollTop'
+import ScrollTop from 'components/layouts/ScrollTop'
 
 const pageLinks = [
   { to: '/', title: 'トップ' },

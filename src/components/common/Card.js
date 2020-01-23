@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Grid } from '@material-ui/core'
 import Image from 'components/Image'
-import H2 from 'components/H2'
+import H2 from 'components/common/H2'
 
 const useStyles = makeStyles(theme => ({
   root: {

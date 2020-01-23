@@ -1,5 +1,5 @@
 import React from 'react'
-import KyouseiServiceCard from 'components/KyouseiServiceCard'
+import KyouseiServiceCard from 'components/service/KyouseiServiceCard'
 
 export default props => {
   const { classes } = props

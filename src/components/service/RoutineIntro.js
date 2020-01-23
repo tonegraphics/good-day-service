@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'components/Image'
-import Routine from 'components/Routine'
+import Routine from 'components/service/Routine'
 
 export default props => {
   const { classes } = props
