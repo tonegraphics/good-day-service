@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default () => {
-  const matches = useMediaQuery('(min-width: 1024px)')
+  const matches = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ matches })
   return (
     <div className={classes.contentsWrapper}>

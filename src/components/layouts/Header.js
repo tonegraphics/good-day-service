@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
 
 export default props => {
   const { pageLinks, currentPage } = props
-  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const isDesktop = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ isDesktop })
 
   const heroStyle = {
