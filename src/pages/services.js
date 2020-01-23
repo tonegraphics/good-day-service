@@ -28,13 +28,6 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'pre-line',
     marginBottom: 4,
   },
-  caption: {
-    fontSize: props => (props.isDesktop ? 16 : 10),
-    lineHeight: props => (props.isDesktop ? '24px' : '14px'),
-    color: colors.red,
-    whiteSpace: 'pre-line',
-    margin: 0,
-  },
   end: {
     display: 'flex',
     justifyContent: 'center',
