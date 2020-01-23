@@ -26,7 +26,7 @@ export default () => {
   return (
     <div>
       <h3 className={classes.caption}>お問い合わせはこちら</h3>
-      <Button link="/">0948-29-4112</Button>
+      <Button link="0948-29-4112">0948-29-4112</Button>
       <footer className={classes.footer}>
         <FooterContents />
       </footer>

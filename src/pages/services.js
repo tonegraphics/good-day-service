@@ -33,6 +33,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    marginBottom: 16,
   },
   target: {
     whiteSpace: 'pre-line',
