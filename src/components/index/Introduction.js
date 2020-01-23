@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 import Image from 'components/Image'
-import Button from 'components/Button'
+import Button from 'components/common/Button'
 import { makeStyles } from '@material-ui/styles'
 import { fonts } from 'libs/fonts'
 import { colors } from 'libs/colors'
