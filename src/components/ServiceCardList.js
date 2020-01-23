@@ -12,7 +12,7 @@ const cardContents = [
     title: '生活介護',
     offerTime: '9:30 ~ 16:30',
     target:
-      '18歳以上で常時介護等の支援が必要な者で介護給付受給者証をお持ちの方',
+      '18歳以上で常時介護等の支援が必要な方で\n介護給付受給者証をお持ちの方',
     imageSrc: 'service2.jpeg',
   },
   {
