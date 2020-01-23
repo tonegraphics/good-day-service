@@ -4,7 +4,7 @@ import SEO from 'components/seo'
 import Container from 'components/layouts/Container'
 import H1 from 'components/common/H1'
 import Table from 'components/common/Table'
-import AccessMap from '../components/AccessMap'
+import AccessMap from '../components/access/AccessMap'
 
 const rows = [
   { title: '住所', data: '〒820 - 0001\n福岡県飯塚市鯰田64番地1' },
