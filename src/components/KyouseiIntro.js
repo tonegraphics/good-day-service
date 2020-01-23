@@ -17,9 +17,7 @@ export default props => {
         <span className={classes.highlighter}>児童発達支援</span>
         」と「
         <span className={classes.highlighter}>放課後等デイサービス</span>
-        」の指定を受け、高齢者・障がい者・障がい児、誰もが利用できるデイサービス事業所として運営しております。今後は、障がい等のない子供も利用出来る様に「
-        <span className={classes.highlighter}>一時預かり保育</span>
-        」の開始も検討しております。
+        」の指定を受け、高齢者・障がい者・障がい児、誰もが利用できるデイサービス事業所として運営しております。今後は、障がい等のない子供も利用できる様に検討しております。
       </p>
     </div>
   )
