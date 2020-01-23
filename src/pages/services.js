@@ -46,11 +46,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: props => fonts(props.isDesktop).table,
     margin: 0,
   },
-  goodchanWrapper: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    margin: '24px 40px 0 0',
-  },
   highlighter: {
     fontWeight: 'bold',
     color: colors.red,
