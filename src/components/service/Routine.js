@@ -1,6 +1,6 @@
 import React from 'react'
-import RoutineWork from 'components/RoutineWork'
 import PicturesGrid from 'components/common/PicturesGrid'
+import RoutineWork from 'components/service/RoutineWork'
 
 export default props => {
   const { classes, isDesktop } = props

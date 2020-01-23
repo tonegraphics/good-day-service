@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceCardList from 'components/ServiceCardList'
+import ServiceCardList from 'components/service/ServiceCardList'
 
 export default props => {
   const { classes, isDesktop } = props

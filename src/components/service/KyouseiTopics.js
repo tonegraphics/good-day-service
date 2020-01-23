@@ -1,6 +1,6 @@
 import React from 'react'
-import Topic from 'components/Topic'
 import H2 from 'components/common/H2'
+import Topic from 'components/service/Topic'
 
 const firstTopics = [
   {

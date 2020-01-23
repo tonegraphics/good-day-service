@@ -1,7 +1,7 @@
 import React from 'react'
-import Timeline from 'assets/timeline.svg'
 import { makeStyles } from '@material-ui/styles'
 import { colors } from 'libs/colors'
+import Timeline from 'assets/timeline.svg'
 
 const useStyles = makeStyles(theme => ({
   timeline: {

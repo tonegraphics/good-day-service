@@ -8,10 +8,10 @@ import SEO from 'components/seo'
 import Container from 'components/layouts/Container'
 import H1 from 'components/common/H1'
 import H2 from 'components/common/H2'
-import KyouseiIntro from 'components/KyouseiIntro'
-import KyouseiTopics from 'components/KyouseiTopics'
-import ServiceIntro from 'components/ServiceIntro'
-import RoutineIntro from '../components/RoutineIntro'
+import KyouseiIntro from 'components/service/KyouseiIntro'
+import KyouseiTopics from 'components/service/KyouseiTopics'
+import ServiceIntro from 'components/service/ServiceIntro'
+import RoutineIntro from '../components/service/RoutineIntro'
 
 const useStyles = makeStyles(theme => ({
   body: {
