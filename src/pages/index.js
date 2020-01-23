@@ -38,6 +38,7 @@ export default () => {
     'event3.jpeg',
     'event4.jpg',
     'event5.jpeg',
+    'event6.jpeg',
   ]
 
   return (

@@ -28,13 +28,6 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'pre-line',
     marginBottom: 4,
   },
-  caption: {
-    fontSize: props => (props.isDesktop ? 16 : 10),
-    lineHeight: props => (props.isDesktop ? '24px' : '14px'),
-    color: colors.red,
-    whiteSpace: 'pre-line',
-    margin: 0,
-  },
   end: {
     display: 'flex',
     justifyContent: 'center',
@@ -45,11 +38,6 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'pre-line',
     fontSize: props => fonts(props.isDesktop).table,
     margin: 0,
-  },
-  goodchanWrapper: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    margin: '24px 40px 0 0',
   },
   highlighter: {
     fontWeight: 'bold',

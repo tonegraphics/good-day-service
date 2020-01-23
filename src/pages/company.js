@@ -41,7 +41,12 @@ const relatedOfficeRows = [
 
 export default () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
-  const filenames = ['41plus1.jpg', '41plus2.jpg', '41plus3.jpg', '41plus4.jpg']
+  const filenames = [
+    '41plus1.jpg',
+    '41plus2.jpg',
+    '41plus3.jpg',
+    '41plus4.jpeg',
+  ]
   return (
     <Layout page="/company">
       <SEO title="Company" />

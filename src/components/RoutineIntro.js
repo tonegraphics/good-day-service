@@ -3,17 +3,7 @@ import Image from 'components/Image'
 import Routine from 'components/Routine'
 
 export default props => {
-  const { classes, isDesktop } = props
-
-  const goodchanstyle = isDesktop
-    ? {
-        width: 346,
-        height: 358,
-      }
-    : {
-        width: 230,
-        height: 240,
-      }
+  const { classes } = props
 
   return (
     <div>
@@ -24,7 +14,7 @@ export default props => {
       </p>
       <Routine {...props} />
       <div className={classes.goodchanWrapper}>
-        <Image filename="goodchan5.png" style={goodchanstyle} />
+        <Image filename="goodchan5.jpeg" />
       </div>
     </div>
   )
