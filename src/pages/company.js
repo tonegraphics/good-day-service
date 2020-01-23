@@ -12,7 +12,7 @@ import RelatedOfficeIntro from 'components/company/RelatedOfficeIntro'
 import NewBuildingIntro from 'components/company/NewBuildingIntro'
 
 export default () => {
-  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const isDesktop = useMediaQuery('(min-width: 1080px)')
 
   return (
     <Layout page="/company">

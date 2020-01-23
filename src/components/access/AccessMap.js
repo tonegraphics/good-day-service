@@ -4,7 +4,7 @@ import { useMediaQuery } from '@material-ui/core'
 
 export const MapContainer = props => {
   const { google } = props
-  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const isDesktop = useMediaQuery('(min-width: 1080px)')
   const style = {
     width: isDesktop ? 960 : 'calc(100vw - 48px)',
     height: isDesktop ? 520 : 320,

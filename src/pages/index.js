@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default () => {
-  const isDesktop = useMediaQuery('(min-width: 1024px)')
+  const isDesktop = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ isDesktop })
 
   return (
