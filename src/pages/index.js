@@ -10,13 +10,14 @@ import TopSubCardList from 'components/TopSubCardList'
 import { fonts } from 'libs/fonts'
 import Introduction from 'components/Introduction'
 import PicturesGrid from 'components/PicturesGrid'
+import Evaluation from 'components/Evaluation'
 
 const useStyles = makeStyles(theme => ({
   body: {
     fontSize: props => fonts(props.isDesktop).body,
     lineHeight: '32px',
     whiteSpace: 'pre-line',
-    margin: 0,
+    margin: '0 0 16px',
   },
   subCard: {
     height: props => (props.isDesktop ? 64 : 'auto'),
@@ -67,6 +68,11 @@ export default () => {
           これぞ、THE 地域密着！！
         </p>
         <PicturesGrid {...{ isDesktop }} filenames={eventfiles} />
+      </Container>
+
+      <Container>
+        <H1>ガイドラインに基づく評価</H1>
+        <Evaluation {...{ classes }} />
       </Container>
     </Layout>
   )

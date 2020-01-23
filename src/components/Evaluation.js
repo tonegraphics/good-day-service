@@ -3,6 +3,7 @@ import H2 from 'components/H2'
 import Button from 'components/Button'
 
 export default props => {
+  const { classes } = props
   const contents = [
     {
       title: '児童発達支援',
@@ -21,11 +22,20 @@ export default props => {
   ]
   return (
     <div>
+      <p className={classes.body}>
+        厚生労働省が定めたガイドラインに基づく評価表です。(毎年11月更新予定)
+      </p>
       {contents.map(c => (
         <div>
-          <H2>{c.title}</H2>
-          <Button href={c.selfEval}>自己評価</Button>
-          <Button href={c.parentsEval}>保護者等からの評価</Button>
+          <h2>{c.title}</h2>
+          <div style={{ display: 'flex' }}>
+            <Button link={c.selfEval} target="_blank">
+              自己評価
+            </Button>
+            <Button link={c.parentsEval} target="_blank">
+              保護者等からの評価
+            </Button>
+          </div>
         </div>
       ))}
     </div>
