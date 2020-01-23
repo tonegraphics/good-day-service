@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'components/common/Button'
 import ServiceCardList from 'components/service/ServiceCardList'
 
 export default props => {
@@ -30,6 +31,7 @@ export default props => {
           </>
         )}
       </div>
+      <Button link="0948-29-4112">0948-29-4112</Button>
     </div>
   )
 }

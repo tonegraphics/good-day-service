@@ -33,16 +33,6 @@ export default props => {
           isHighlighted
         />
       ))}
-      {/* {secondTopics.map(t => (
-        <Topic key={t.title} classes={classes} title={t.title} text={t.text} />
-      ))}
-      <p className={classes.body}>
-        全体としては、
-        <span className={classes.bold}>
-          利用者を限定しないため一緒に過ごすことによる生活上の相乗効果があること
-        </span>
-        など様々な利点があります。
-      </p> */}
       <H2>代表からのメッセージ</H2>
       <p className={classes.body + ' ' + classes.topic}>
         アットホームな雰囲気で、対象を限定せず子ども〜お年寄りまで様々な年代の方と過ごす事ができ、より多くの「人」と関わりがもてます。

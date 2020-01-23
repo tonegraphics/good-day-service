@@ -25,7 +25,7 @@ export default props => {
         厚生労働省が定めたガイドラインに基づく評価表です。(毎年11月更新予定)
       </p>
       {contents.map(c => (
-        <div>
+        <div key={c.title}>
           <h2>{c.title}</h2>
           <div style={{ display: 'flex' }}>
             <Button link={c.selfEval} target="_blank">
