@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
-import Container from 'components/Container'
+import Container from 'components/layouts/Container'
 import H1 from 'components/H1'
 import H2 from 'components/H2'
 import { useMediaQuery } from '@material-ui/core'
