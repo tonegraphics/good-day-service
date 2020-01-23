@@ -1,5 +1,6 @@
 import React from 'react'
 import Topic from 'components/Topic'
+import H2 from 'components/H2'
 
 const firstTopics = [
   {
@@ -13,24 +14,6 @@ const firstTopics = [
   {
     title: '3. 地域密着',
     text: '自然豊かな場所に立地し、地域との交流もさかんです。',
-  },
-]
-
-const secondTopics = [
-  {
-    title: '高齢者にとって',
-    text:
-      '子どもなど多世代と触れ合うことで、日常生活の改善や会話が促進する等々',
-  },
-  {
-    title: '障がい者にとって',
-    text:
-      '居場所ができ、多世代と関わる事で自分の役割を見出し、自立・社会生活向上へとつながる等々',
-  },
-  {
-    title: '子どもにとって',
-    text:
-      '多世代で過ごす事により他人への思いやりや優しさが身につき、社会生活向上へとつながる等々',
   },
 ]
 
@@ -50,7 +33,7 @@ export default props => {
           isHighlighted
         />
       ))}
-      {secondTopics.map(t => (
+      {/* {secondTopics.map(t => (
         <Topic key={t.title} classes={classes} title={t.title} text={t.text} />
       ))}
       <p className={classes.body}>
@@ -59,6 +42,18 @@ export default props => {
           利用者を限定しないため一緒に過ごすことによる生活上の相乗効果があること
         </span>
         など様々な利点があります。
+      </p> */}
+      <H2>代表からのメッセージ</H2>
+      <p className={classes.body + ' ' + classes.topic}>
+        アットホームな雰囲気で、対象を限定せず子ども〜お年寄りまで様々な年代の方と過ごす事ができ、より多くの「人」と関わりがもてます。
+        ひと昔前の日本の地域コミュニティーの様なお互いに協力し合いながら、助け合い精神で子育てや人付き合いをする、いろんな人達が一緒に楽しく過ごす等々の地域密着のデイサービス（コミュニティデイサービス）を提供していきます。
+        グッドデイでは、なにげない普通の日常生活と変わらない事していきます〜。
+        普段味わえない様な事が経験ができるかも…{'\n'}
+        それは、あなた次第！！！（笑）
+      </p>
+      <p className={classes.body}>
+        皆様で、コンパクトに１つの場所で担えて、地域で必要とされる{'\n'}
+        身近なデイを作りましょ〜〜〜〜〜〜〜。
       </p>
     </div>
   )
