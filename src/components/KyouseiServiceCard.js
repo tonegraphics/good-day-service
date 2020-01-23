@@ -5,7 +5,7 @@ export default ({ classes, isDesktop }) => {
   return (
     <Card imageSrc={'kyousei.jpeg'} isWide={isDesktop}>
       <p className={classes.body + ' ' + classes.bold + ' ' + classes.topic}>
-        年齢や障がいの有無にかかわらず誰もが住み慣れた地域でデイサービスを受けられる場所を「
+        年齢や障がいの有無にかかわらず誰もが住み慣れた地域でサービスを受けられる場所を「
         <span className={classes.highlighter}>共生型サービス</span>
         」と言います。
       </p>
