@@ -1,6 +1,6 @@
 import React from 'react'
 import Topic from 'components/Topic'
-import H2 from 'components/H2'
+import H2 from 'components/common/H2'
 
 const firstTopics = [
   {

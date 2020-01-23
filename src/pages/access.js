@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
 import Container from 'components/layouts/Container'
-import H1 from 'components/H1'
+import H1 from 'components/common/H1'
 import Table from 'components/common/Table'
 import AccessMap from '../components/AccessMap'
 

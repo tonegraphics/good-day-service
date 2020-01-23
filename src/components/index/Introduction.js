@@ -5,7 +5,7 @@ import Button from 'components/common/Button'
 import { makeStyles } from '@material-ui/styles'
 import { fonts } from 'libs/fonts'
 import { colors } from 'libs/colors'
-import H2 from 'components/H2'
+import H2 from 'components/common/H2'
 
 const useStyles = makeStyles(theme => ({
   root: {
