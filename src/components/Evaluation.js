@@ -1,5 +1,4 @@
 import React from 'react'
-import H2 from 'components/H2'
 import Button from 'components/Button'
 
 export default props => {
