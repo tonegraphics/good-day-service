@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'components/Image'
 import PicturesGrid from 'components/common/PicturesGrid'
 import RoutineWork from 'components/service/RoutineWork'
 
@@ -50,10 +51,13 @@ export default props => {
     {
       title: '手作りおやつ',
       detail: (
-        <p className={classes.body}>
-          皆さんと一緒におやつを楽しくいただきます。子どもたちは日常生活の練習として、
-          高齢者の方から駄菓子を自分で購入し、食べることもできます。
-        </p>
+        <div>
+          <p className={classes.body}>
+            皆さんと一緒におやつを楽しくいただきます。子どもたちは日常生活の練習として、
+            高齢者の方から駄菓子を自分で購入し、食べることもできます。
+          </p>
+          <Image filename="snack1.jpeg" />
+        </div>
       ),
     },
     {

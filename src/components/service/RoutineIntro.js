@@ -13,9 +13,7 @@ export default props => {
         {'\n'}
       </p>
       <Routine {...props} />
-      <div className={classes.goodchanWrapper}>
-        <Image filename="goodchan5.jpeg" />
-      </div>
+      <Image filename="goodchan5.png" />
     </div>
   )
 }
