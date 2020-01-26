@@ -1,9 +1,9 @@
 {
   "name": "good-day-service",
   "private": true,
-  "description": "",
+  "description": "福岡県飯塚氏鯰田にある、高齢者・障がい者・障がい児共生型福祉サービス事業所",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hayato OKUMA & Taiga KIYOKAWA",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "dotenv": "^8.2.0",
