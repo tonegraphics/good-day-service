@@ -17,20 +17,28 @@ export default () => {
   return (
     <Layout page="/company">
       <SEO title="Company" />
-      <Container>
-        <H1 title="会社概要" />
-        <CompanyIntro />
-      </Container>
-      <Container>
-        <H1 title="事業所概要" />
-        <OfficeIntro />
-        <H2 title="事業所番号" />
-        <OfficeNumbers />
-        <H2 title="関連事業所" />
-        <RelatedOfficeIntro />
-        <H2 title="こどもデイ「41プラス(仮)」建設中!" />
-        <NewBuildingIntro {...{ isDesktop }} />
-      </Container>
+      <Container
+        body={
+          <div>
+            <H1 title="会社概要" />
+            <CompanyIntro />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="事業所概要" />
+            <OfficeIntro />
+            <H2 title="事業所番号" />
+            <OfficeNumbers />
+            <H2 title="関連事業所" />
+            <RelatedOfficeIntro />
+            <H2 title="こどもデイ「41プラス(仮)」建設中!" />
+            <NewBuildingIntro {...{ isDesktop }} />
+          </div>
+        }
+      />
     </Layout>
   )
 }

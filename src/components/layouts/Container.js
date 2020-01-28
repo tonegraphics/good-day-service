@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
+  const { body } = props
   const matches = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ matches })
-  return <div className={classes.root}>{props.children}</div>
+  return <div className={classes.root}>{body}</div>
 }
