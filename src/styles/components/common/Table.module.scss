@@ -3,14 +3,12 @@
 .root {
   width: 100%;
 }
-
 .row {
   display: flex;
   align-items: center;
   white-space: pre-line;
   margin-bottom: 8px;
 }
-
 .cellTitle {
   margin: 0 0 8px;
   padding: 0;
@@ -18,7 +16,6 @@
   font-weight: bold;
   width: 35%;
 }
-
 .cellData {
   margin: 0 0 8px;
   padding: 0;

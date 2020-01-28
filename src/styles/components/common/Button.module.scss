@@ -1,11 +1,10 @@
 @import '../../color.scss';
 
-.buttonWapper {
+.button-wapper {
   display: flex;
   justify-content: center;
   margin: 0 16px 32px;
 }
-
 .button {
   color: $white;
   background-color: $red;
