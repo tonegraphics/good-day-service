@@ -1,9 +1,9 @@
 {
   "name": "good-day-service",
   "private": true,
-  "description": "",
+  "description": "福岡県飯塚氏鯰田にある、高齢者・障がい者・障がい児共生型福祉サービス事業所",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hayato OKUMA & Taiga KIYOKAWA",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "dotenv": "^8.2.0",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -39,7 +40,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {
     "type": "git",
