@@ -72,7 +72,6 @@ export default props => {
           isDesktop={isDesktop}
         />
       </header>
-      {console.log(isTop)}
       {isTop && (
         <div className={classes.hero}>
           <Identity {...{ isDesktop }} />
