@@ -65,7 +65,7 @@ export default ({ isDesktop }) => {
           />
         </Grid>
       </Grid>
-      <Button link="/services">サービスの詳細はこちら→</Button>
+      <Button link="/services" title="サービスの詳細はこちら→" />
     </div>
   )
 }
