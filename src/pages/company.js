@@ -28,7 +28,7 @@ export default () => {
         <OfficeNumbers />
         <H2>関連事業所</H2>
         <RelatedOfficeIntro />
-        <H2>児童デイサービス「41プラス(仮)」建設中!</H2>
+        <H2>こどもデイ「41プラス(仮)」建設中!</H2>
         <NewBuildingIntro {...{ isDesktop }} />
       </Container>
     </Layout>
