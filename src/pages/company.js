@@ -17,6 +17,7 @@ export default () => {
   return (
     <Layout page="/company" isTop={false}>
       <SEO title="Company" />
+<<<<<<< HEAD
       <Container>
         <H1>会社概要</H1>
         <CompanyIntro />
@@ -31,6 +32,30 @@ export default () => {
         <H2>こどもデイ「41プラス(仮)」建設中!</H2>
         <NewBuildingIntro {...{ isDesktop }} />
       </Container>
+=======
+      <Container
+        body={
+          <div>
+            <H1 title="会社概要" />
+            <CompanyIntro />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="事業所概要" />
+            <OfficeIntro />
+            <H2 title="事業所番号" />
+            <OfficeNumbers />
+            <H2 title="関連事業所" />
+            <RelatedOfficeIntro />
+            <H2 title="こどもデイ「41プラス(仮)」建設中!" />
+            <NewBuildingIntro {...{ isDesktop }} />
+          </div>
+        }
+      />
+>>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
     </Layout>
   )
 }

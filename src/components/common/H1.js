@@ -20,11 +20,16 @@ const useStyles = makeStyles(theme => ({
 export default props => {
   const matches = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ matches })
+  const { title } = props
   return (
     <div>
+<<<<<<< HEAD
       <h1 className={classes.title}>
         <main>{props.children}</main>
       </h1>
+=======
+      <h1 className={classes.title}>{title}</h1>
+>>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
     </div>
   )
 }

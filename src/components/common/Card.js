@@ -11,18 +11,22 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
-  const { title, imageSrc, isWide, isSub, children } = props
+  const { title, imageSrc, isWide, isSub, body } = props
   const classes = useStyles({ isSub })
   const itemWidth = isSub || !isWide ? 12 : 6
 
   return (
     <div className={classes.root}>
-      {title && <H2>{title}</H2>}
+      {title && <H2 title={title} />}
       {/* spacing={1} が 8px に相当. */}
       {/* makeStyles に自分で定義した theme の内容で spacing のサイズを調整できるっぽい */}
       <Grid container spacing={2} direction={isWide ? 'row-reverse' : 'row'}>
         <Grid item xs={itemWidth}>
+<<<<<<< HEAD
           <main>{children}</main>
+=======
+          {body}
+>>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
         </Grid>
         <Grid item xs={itemWidth}>
           <Image filename={imageSrc} />

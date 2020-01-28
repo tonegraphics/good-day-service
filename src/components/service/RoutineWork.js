@@ -10,11 +10,10 @@ const useStyles = makeStyles(theme => ({
     fill: colors.red,
     margin: '24px 0',
   },
-  children: { marginBottom: 16 },
 }))
 
 export default props => {
-  const { classes, isDesktop, title, children, isEnd } = props
+  const { classes, isDesktop, title, body, isEnd } = props
   const innerClasses = useStyles({ isDesktop })
   const [_title, time] = title.split(' ')
 
@@ -28,7 +27,11 @@ export default props => {
           </span>
         )}
       </p>
+<<<<<<< HEAD
       <main>{children}</main>
+=======
+      {body}
+>>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
       {!isEnd && <Timeline className={innerClasses.timeline} />}
     </div>
   )

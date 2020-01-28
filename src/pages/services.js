@@ -58,20 +58,32 @@ export default function() {
   return (
     <Layout page="/services" isTop={false}>
       <SEO title="Services" />
-      <Container>
-        <H1>サービス</H1>
-        <ServiceIntro {...{ classes, isDesktop }} />
-      </Container>
-      <Container>
-        <H1>共生型サービスについて</H1>
-        <KyouseiIntro {...{ classes, isDesktop }} />
-        <H2>特徴</H2>
-        <KyouseiTopics {...{ classes }} />
-      </Container>
-      <Container>
-        <H1>1日の流れ</H1>
-        <RoutineIntro {...{ classes, isDesktop }} />
-      </Container>
+      <Container
+        body={
+          <div>
+            <H1 title="サービス" />
+            <ServiceIntro {...{ classes, isDesktop }} />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="共生型サービスについて" />
+            <KyouseiIntro {...{ classes, isDesktop }} />
+            <H2 title="特徴" />
+            <KyouseiTopics {...{ classes }} />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="1日の流れ" />
+            <RoutineIntro {...{ classes, isDesktop }} />
+          </div>
+        }
+      />
     </Layout>
   )
 }

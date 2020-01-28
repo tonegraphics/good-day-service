@@ -93,8 +93,7 @@ export default props => {
       {...props}
       title={r.title}
       isEnd={i === routineContents.length - 1}
-    >
-      {r.detail}
-    </RoutineWork>
+      body={r.detail}
+    />
   ))
 }
