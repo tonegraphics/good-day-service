@@ -17,13 +17,5 @@ export default props => {
   const { body } = props
   const matches = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ matches })
-<<<<<<< HEAD
-  return (
-    <div className={classes.root}>
-      <main>{props.children}</main>
-    </div>
-  )
-=======
   return <div className={classes.root}>{body}</div>
->>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
 }

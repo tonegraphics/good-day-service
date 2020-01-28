@@ -27,11 +27,7 @@ export default props => {
           </span>
         )}
       </p>
-<<<<<<< HEAD
-      <main>{children}</main>
-=======
       {body}
->>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
       {!isEnd && <Timeline className={innerClasses.timeline} />}
     </div>
   )

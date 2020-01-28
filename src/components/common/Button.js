@@ -29,13 +29,8 @@ export default props => {
   const classes = useStyles()
   return (
     <div className={classes.buttonWapper}>
-<<<<<<< HEAD
-      <a className={classes.button} href={props.link} target={props.target}>
-        <main>{props.children}</main>
-=======
       <a className={classes.button} href={link} target={target}>
         {title}
->>>>>>> 21b34fef6d800b838f1b25b26f7f09b86ae77a94
       </a>
     </div>
   )
