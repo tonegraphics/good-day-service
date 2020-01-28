@@ -25,13 +25,7 @@ export default props => {
         対象者ごとに施設を限定し、住宅地から離れた場所で提供されるような従来のデイサービスに対し、共生型(富山型)デイサービスは以下の3つをコンセプトに運営しております。
       </p>
       {firstTopics.map(t => (
-        <Topic
-          key={t.title}
-          classes={classes}
-          title={t.title}
-          text={t.text}
-          isHighlighted
-        />
+        <Topic key={t.title} classes={classes} title={t.title} text={t.text} />
       ))}
       <H2 title="代表からのメッセージ" />
       <p className={classes.bodyTopic}>
