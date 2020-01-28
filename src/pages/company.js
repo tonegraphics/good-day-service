@@ -18,11 +18,11 @@ export default () => {
     <Layout page="/company">
       <SEO title="Company" />
       <Container>
-        <H1>会社概要</H1>
+        <H1 title="会社概要" />
         <CompanyIntro />
       </Container>
       <Container>
-        <H1>事業所概要</H1>
+        <H1 title="事業所概要" />
         <OfficeIntro />
         <H2>事業所番号</H2>
         <OfficeNumbers />

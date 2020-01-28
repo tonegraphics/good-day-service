@@ -16,7 +16,7 @@ export default () => {
     <Layout page="/access">
       <SEO title="Access" />
       <Container>
-        <H1>アクセス</H1>
+        <H1 title="アクセス" />
         <Table rows={rows} />
         <AccessMap />
       </Container>

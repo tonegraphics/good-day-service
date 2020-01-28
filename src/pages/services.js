@@ -59,17 +59,17 @@ export default function() {
     <Layout page="/services">
       <SEO title="Services" />
       <Container>
-        <H1>サービス</H1>
+        <H1 title="サービス" />
         <ServiceIntro {...{ classes, isDesktop }} />
       </Container>
       <Container>
-        <H1>共生型サービスについて</H1>
+        <H1 title="共生型サービスについて" />
         <KyouseiIntro {...{ classes, isDesktop }} />
         <H2>特徴</H2>
         <KyouseiTopics {...{ classes }} />
       </Container>
       <Container>
-        <H1>1日の流れ</H1>
+        <H1 title="1日の流れ" />
         <RoutineIntro {...{ classes, isDesktop }} />
       </Container>
     </Layout>

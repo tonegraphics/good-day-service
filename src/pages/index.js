@@ -33,22 +33,22 @@ export default () => {
     <Layout page="/">
       <SEO title="Home" />
       <Container>
-        <H1>グッドデイサービスについて</H1>
+        <H1 title="グッドデイサービスについて" />
         <Introduction {...{ isDesktop }} />
         <TopCardList {...{ classes, isDesktop }} />
         <TopSubCardList {...{ classes, isDesktop }} />
       </Container>
       <Container>
-        <H1>グッドちゃん</H1>
+        <H1 title="グッドちゃん" />
         <GoodchanIntro {...{ classes, isDesktop }} />
       </Container>
       <Container>
-        <H1>グッドデイ2大イベント!!</H1>
+        <H1 title="グッドデイ2大イベント!!" />
         <EventIntro {...{ classes, isDesktop }} />
       </Container>
 
       <Container>
-        <H1>ガイドラインに基づく評価</H1>
+        <H1 title="評価表" />
         <Evaluation {...{ classes }} />
       </Container>
     </Layout>
