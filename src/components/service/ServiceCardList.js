@@ -37,24 +37,18 @@ export default ({ classes, isDesktop }) => {
       title={content.title}
       imageSrc={content.imageSrc}
       isWide={isDesktop}
-    >
-      <p className={classes.body}>
-        提供時間
-        <span className={classes.bold}>{`\n${content.offerTime}\n\n`}</span>
-      </p>
-      <p className={classes.body}>対象者{'\n'}</p>
-      {typeof content.target === 'string' ? (
-        <p className={classes.target + ' ' + classes.highlighter}>
-          {content.target}
-        </p>
-      ) : (
-        content.target.map(t => (
-          <p key={t.type} className={classes.target}>
-            {`${t.type}:\n`}
-            <span className={classes.highlighter}>{t.detail}</span>
+      body={
+        <div>
+          <p className={classes.body}>
+            提供時間
+            <span className={classes.bold}>{`\n${content.offerTime}\n\n`}</span>
           </p>
-        ))
-      )}
-    </Card>
+          <p className={classes.body}>対象者{'\n'}</p>
+          <p className={classes.target + ' ' + classes.highlighter}>
+            {content.target}
+          </p>
+        </div>
+      }
+    />
   ))
 }

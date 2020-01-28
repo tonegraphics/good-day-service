@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
-  const { title, imageSrc, isWide, isSub, children } = props
+  const { title, imageSrc, isWide, isSub, body } = props
   const classes = useStyles({ isSub })
   const itemWidth = isSub || !isWide ? 12 : 6
 
@@ -22,7 +22,7 @@ export default props => {
       {/* makeStyles に自分で定義した theme の内容で spacing のサイズを調整できるっぽい */}
       <Grid container spacing={2} direction={isWide ? 'row-reverse' : 'row'}>
         <Grid item xs={itemWidth}>
-          {children}
+          {body}
         </Grid>
         <Grid item xs={itemWidth}>
           <Image filename={imageSrc} />

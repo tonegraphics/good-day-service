@@ -29,8 +29,7 @@ export default ({ classes, isDesktop }) => {
       title={content.title}
       imageSrc={content.imageSrc}
       isWide={isDesktop}
-    >
-      <p className={classes.body}>{content.text}</p>
-    </Card>
+      body={<p className={classes.body}>{content.text}</p>}
+    />
   ))
 }
