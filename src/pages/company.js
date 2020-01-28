@@ -15,7 +15,7 @@ export default () => {
   const isDesktop = useMediaQuery('(min-width: 1080px)')
 
   return (
-    <Layout page="/company">
+    <Layout page="/company" isTop={false}>
       <SEO title="Company" />
       <Container>
         <H1>会社概要</H1>

@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
-  const { pageLinks, currentPage, isTop = false } = props
+  const { pageLinks, currentPage, isTop = true } = props
   const isDesktop = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ isDesktop })
 

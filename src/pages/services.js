@@ -56,7 +56,7 @@ export default function() {
   const classes = useStyles({ isDesktop })
 
   return (
-    <Layout page="/services">
+    <Layout page="/services" isTop={false}>
       <SEO title="Services" />
       <Container>
         <H1>サービス</H1>
