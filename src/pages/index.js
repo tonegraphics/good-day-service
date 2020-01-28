@@ -30,7 +30,7 @@ export default () => {
   const classes = useStyles({ isDesktop })
 
   return (
-    <Layout page="/">
+    <Layout page="/" isTop={true}>
       <SEO title="Home" />
       <Container>
         <H1>グッドデイサービスについて</H1>
