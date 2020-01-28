@@ -25,11 +25,12 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
+  const { link, target, title } = props
   const classes = useStyles()
   return (
     <div className={classes.buttonWapper}>
-      <a className={classes.button} href={props.link} target={props.target}>
-        <main>{props.children}</main>
+      <a className={classes.button} href={link} target={target}>
+        {title}
       </a>
     </div>
   )

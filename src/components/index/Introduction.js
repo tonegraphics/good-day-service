@@ -53,7 +53,7 @@ export default ({ isDesktop }) => {
             </span>
             です。
           </p>
-          <H2>企業理念</H2>
+          <H2 title="企業理念" />
           <p className={classes.body + ' ' + classes.identity}>
             年齡・認知症や障がい等に関わらず家族のような雰囲気を心掛け、ともに支え合い共に助け合い誰もが地域で共に過ごせる様な環境（共生）笑って帰れる様な場所づくりに日々努めていきます。
           </p>
@@ -65,7 +65,7 @@ export default ({ isDesktop }) => {
           />
         </Grid>
       </Grid>
-      <Button link="/services">サービスの詳細はこちら→</Button>
+      <Button link="/services" title="サービスの詳細はこちら→" />
     </div>
   )
 }

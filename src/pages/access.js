@@ -15,11 +15,15 @@ export default () => {
   return (
     <Layout page="/access" isTop={false}>
       <SEO title="Access" />
-      <Container>
-        <H1>アクセス</H1>
-        <Table rows={rows} />
-        <AccessMap />
-      </Container>
+      <Container
+        body={
+          <div>
+            <H1 title="アクセス" />
+            <Table rows={rows} />
+            <AccessMap />
+          </div>
+        }
+      />
     </Layout>
   )
 }

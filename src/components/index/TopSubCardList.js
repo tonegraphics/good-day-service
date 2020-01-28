@@ -31,11 +31,16 @@ export default ({ classes, isDesktop }) => {
     <Grid container spacing={5}>
       {subCardContents.map(content => (
         <Grid key={content.title} item xs={isDesktop ? 6 : 12} spacing={0}>
-          <Card title={content.title} imageSrc={content.imageSrc} isSub>
-            <p className={classes.body + ' ' + classes.subCard}>
-              {content.text}
-            </p>
-          </Card>
+          <Card
+            title={content.title}
+            imageSrc={content.imageSrc}
+            isSub
+            body={
+              <p className={classes.body + ' ' + classes.subCard}>
+                {content.text}
+              </p>
+            }
+          />
         </Grid>
       ))}
     </Grid>

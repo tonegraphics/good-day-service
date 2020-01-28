@@ -31,7 +31,7 @@ export default props => {
           </>
         )}
       </div>
-      <Button link="0948-29-4112">0948-29-4112</Button>
+      <Button link="tel:0948-29-4112" title="0948-29-4112" />
     </div>
   )
 }
