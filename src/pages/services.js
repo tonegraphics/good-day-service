@@ -65,7 +65,7 @@ export default function() {
       <Container>
         <H1 title="共生型サービスについて" />
         <KyouseiIntro {...{ classes, isDesktop }} />
-        <H2>特徴</H2>
+        <H2 title="特徴" />
         <KyouseiTopics {...{ classes }} />
       </Container>
       <Container>

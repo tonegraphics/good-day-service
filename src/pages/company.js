@@ -24,11 +24,11 @@ export default () => {
       <Container>
         <H1 title="事業所概要" />
         <OfficeIntro />
-        <H2>事業所番号</H2>
+        <H2 title="事業所番号" />
         <OfficeNumbers />
-        <H2>関連事業所</H2>
+        <H2 title="関連事業所" />
         <RelatedOfficeIntro />
-        <H2>児童デイサービス「41プラス(仮)」建設中!</H2>
+        <H2 title="こどもデイ「41プラス(仮)」建設中!" />
         <NewBuildingIntro {...{ isDesktop }} />
       </Container>
     </Layout>

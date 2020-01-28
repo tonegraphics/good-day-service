@@ -17,7 +17,7 @@ export default props => {
 
   return (
     <div className={classes.root}>
-      {title && <H2>{title}</H2>}
+      {title && <H2 title={title} />}
       {/* spacing={1} が 8px に相当. */}
       {/* makeStyles に自分で定義した theme の内容で spacing のサイズを調整できるっぽい */}
       <Grid container spacing={2} direction={isWide ? 'row-reverse' : 'row'}>
