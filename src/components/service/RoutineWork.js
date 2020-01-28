@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme => ({
     fill: colors.red,
     margin: '24px 0',
   },
-  children: { marginBottom: 16 },
 }))
 
 export default props => {
