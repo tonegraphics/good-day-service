@@ -3,13 +3,14 @@ const path = require('path')
 require('dotenv').config()
 
 module.exports = {
-  pathPrefix: '/good-day-service',
+  // pathPrefix: '/good-day-service',
   siteMetadata: {
     title: `グッドデイサービス`,
     description: `福岡県飯塚氏鯰田にある、高齢者・障がい者・障がい児共生型福祉サービス事業所`,
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

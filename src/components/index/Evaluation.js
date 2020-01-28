@@ -22,18 +22,19 @@ export default props => {
   return (
     <div>
       <p className={classes.body}>
-        厚生労働省が定めたガイドラインに基づく評価表です。(毎年11月更新予定)
+        厚生労働省が定めたガイドラインに基づく評価表です。{'\n'}
+        外部サイト(Google Drive) に移動します。
       </p>
       {contents.map(c => (
         <div key={c.title}>
           <h2>{c.title}</h2>
           <div style={{ display: 'flex' }}>
-            <Button link={c.selfEval} target="_blank">
-              自己評価
-            </Button>
-            <Button link={c.parentsEval} target="_blank">
-              保護者等からの評価
-            </Button>
+            <Button link={c.selfEval} target="_blank" title="自己評価" />
+            <Button
+              link={c.parentsEval}
+              target="_blank"
+              title="保護者等からの評価"
+            />
           </div>
         </div>
       ))}

@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default props => {
-  const { pageLinks, currentPage } = props
+  const { pageLinks, currentPage, isTop = true } = props
   const isDesktop = useMediaQuery('(min-width: 1080px)')
   const classes = useStyles({ isDesktop })
 
@@ -72,7 +72,7 @@ export default props => {
           isDesktop={isDesktop}
         />
       </header>
-      {currentPage.toString() === '/' && (
+      {isTop && (
         <div className={classes.hero}>
           <Identity {...{ isDesktop }} />
           <Image filename="top_image.jpg" style={heroStyle} />

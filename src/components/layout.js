@@ -12,7 +12,7 @@ const pageLinks = [
   { to: '/company', title: '会社概要' },
 ]
 
-export default ({ children, page }) => {
+export default ({ children, page, isTop }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -25,7 +25,7 @@ export default ({ children, page }) => {
 
   return (
     <>
-      <Header pageLinks={pageLinks} currentPage={page} />
+      <Header pageLinks={pageLinks} currentPage={page} isTop={isTop} />
       <div
         style={{
           margin: `0 auto 40px`,

@@ -15,22 +15,30 @@ export default () => {
   const isDesktop = useMediaQuery('(min-width: 1080px)')
 
   return (
-    <Layout page="/company">
+    <Layout page="/company" isTop={false}>
       <SEO title="Company" />
-      <Container>
-        <H1>会社概要</H1>
-        <CompanyIntro />
-      </Container>
-      <Container>
-        <H1>事業所概要</H1>
-        <OfficeIntro />
-        <H2>事業所番号</H2>
-        <OfficeNumbers />
-        <H2>関連事業所</H2>
-        <RelatedOfficeIntro />
-        <H2>こどもデイ「41プラス(仮)」建設中!</H2>
-        <NewBuildingIntro {...{ isDesktop }} />
-      </Container>
+      <Container
+        body={
+          <div>
+            <H1 title="会社概要" />
+            <CompanyIntro />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="事業所概要" />
+            <OfficeIntro />
+            <H2 title="事業所番号" />
+            <OfficeNumbers />
+            <H2 title="関連事業所" />
+            <RelatedOfficeIntro />
+            <H2 title="こどもデイ「41プラス(仮)」建設中!" />
+            <NewBuildingIntro {...{ isDesktop }} />
+          </div>
+        }
+      />
     </Layout>
   )
 }
