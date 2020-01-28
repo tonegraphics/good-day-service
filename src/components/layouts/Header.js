@@ -72,8 +72,11 @@ export default props => {
           isDesktop={isDesktop}
         />
       </header>
-      {console.log(currentPage)}
-      {currentPage && currentPage.toString() === '/' && (
+      {console.log(
+        typeof currentPage === 'undefined' || currentPage.toString() === '/'
+      )}
+      {(typeof currentPage === 'undefined' ||
+        currentPage.toString() === '/') && (
         <div className={classes.hero}>
           <Identity {...{ isDesktop }} />
           <Image filename="top_image.jpg" style={heroStyle} />
