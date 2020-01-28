@@ -22,7 +22,9 @@ export default props => {
   const classes = useStyles({ matches })
   return (
     <div>
-      <h1 className={classes.title}>{props.children}</h1>
+      <h1 className={classes.title}>
+        <main>{props.children}</main>
+      </h1>
     </div>
   )
 }

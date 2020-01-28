@@ -19,7 +19,9 @@ export default props => {
   const classes = useStyles({ matches })
   return (
     <div>
-      <h2 className={classes.title}>{props.children}</h2>
+      <h2 className={classes.title}>
+        <main>{props.children}</main>
+      </h2>
     </div>
   )
 }

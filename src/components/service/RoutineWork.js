@@ -28,7 +28,7 @@ export default props => {
           </span>
         )}
       </p>
-      {children}
+      <main>{children}</main>
       {!isEnd && <Timeline className={innerClasses.timeline} />}
     </div>
   )

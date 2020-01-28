@@ -29,7 +29,7 @@ export default props => {
   return (
     <div className={classes.buttonWapper}>
       <a className={classes.button} href={props.link} target={props.target}>
-        {props.children}
+        <main>{props.children}</main>
       </a>
     </div>
   )

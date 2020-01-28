@@ -22,7 +22,7 @@ export default props => {
       {/* makeStyles に自分で定義した theme の内容で spacing のサイズを調整できるっぽい */}
       <Grid container spacing={2} direction={isWide ? 'row-reverse' : 'row'}>
         <Grid item xs={itemWidth}>
-          {children}
+          <main>{children}</main>
         </Grid>
         <Grid item xs={itemWidth}>
           <Image filename={imageSrc} />
