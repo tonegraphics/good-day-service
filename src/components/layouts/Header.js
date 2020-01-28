@@ -72,7 +72,7 @@ export default props => {
           isDesktop={isDesktop}
         />
       </header>
-      {currentPage.toString() === '/' && (
+      {currentPage && currentPage.toString() === '/' && (
         <div className={classes.hero}>
           <Identity {...{ isDesktop }} />
           <Image filename="top_image.jpg" style={heroStyle} />

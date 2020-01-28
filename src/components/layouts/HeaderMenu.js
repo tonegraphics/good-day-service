@@ -43,7 +43,7 @@ export default props => {
           key={link.to}
           to={link.to}
           className={
-            link.to === currentPage.toString()
+            currentPage && link.to === currentPage.toString()
               ? classes.link + ' ' + classes.current
               : classes.link + ' ' + classes.other
           }
