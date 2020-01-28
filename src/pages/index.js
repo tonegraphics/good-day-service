@@ -32,25 +32,40 @@ export default () => {
   return (
     <Layout page="/">
       <SEO title="Home" />
-      <Container>
-        <H1>グッドデイサービスについて</H1>
-        <Introduction {...{ isDesktop }} />
-        <TopCardList {...{ classes, isDesktop }} />
-        <TopSubCardList {...{ classes, isDesktop }} />
-      </Container>
-      <Container>
-        <H1>グッドちゃん</H1>
-        <GoodchanIntro {...{ classes, isDesktop }} />
-      </Container>
-      <Container>
-        <H1>グッドデイ2大イベント!!</H1>
-        <EventIntro {...{ classes, isDesktop }} />
-      </Container>
-
-      <Container>
-        <H1>ガイドラインに基づく評価</H1>
-        <Evaluation {...{ classes }} />
-      </Container>
+      <Container
+        body={
+          <div>
+            <H1 title="グッドデイサービスについて" />
+            <Introduction {...{ isDesktop }} />
+            <TopCardList {...{ classes, isDesktop }} />
+            <TopSubCardList {...{ classes, isDesktop }} />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="グッドちゃん" />
+            <GoodchanIntro {...{ classes, isDesktop }} />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="グッドデイ2大イベント!!" />
+            <EventIntro {...{ classes, isDesktop }} />
+          </div>
+        }
+      />
+      <Container
+        body={
+          <div>
+            <H1 title="評価表" />
+            <Evaluation {...{ classes }} />
+          </div>
+        }
+      />
     </Layout>
   )
 }
