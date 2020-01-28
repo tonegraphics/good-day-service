@@ -72,6 +72,7 @@ export default props => {
           isDesktop={isDesktop}
         />
       </header>
+      {console.log(currentPage)}
       {currentPage && currentPage.toString() === '/' && (
         <div className={classes.hero}>
           <Identity {...{ isDesktop }} />
