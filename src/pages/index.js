@@ -1,23 +1,56 @@
-import React from "react"
-import { Link } from "gatsby"
-import { makeStyles } from '@material-ui/core';
+import React from 'react'
+import { makeStyles } from '@material-ui/styles'
+import { useMediaQuery } from '@material-ui/core'
+import { fonts } from 'libs/fonts'
 import Layout from 'components/layout'
-import SEO from "components/seo"
+import SEO from 'components/seo'
+import H1 from 'components/common/H1'
+import Container from 'components/layouts/Container'
+import TopCardList from 'components/index/TopCardList'
+import TopSubCardList from 'components/index/TopSubCardList'
+import Introduction from 'components/index/Introduction'
+import GoodchanIntro from 'components/index/GoodchanIntro'
+import EventIntro from 'components/index/EventIntro'
+import Evaluation from 'components/index/Evaluation'
 
 const useStyles = makeStyles(theme => ({
-  title: {
-    color: 'rebeccapurple',
-  }
-}));
+  body: {
+    fontSize: props => fonts(props.isDesktop).body,
+    lineHeight: '32px',
+    whiteSpace: 'pre-line',
+    margin: '0 0 16px',
+  },
+  subCard: {
+    height: props => (props.isDesktop ? 64 : 'auto'),
+  },
+}))
 
-export default function () {
-  const classes = useStyles();
+export default () => {
+  const isDesktop = useMediaQuery('(min-width: 1080px)')
+  const classes = useStyles({ isDesktop })
 
   return (
-    <Layout>
+    <Layout page="/">
       <SEO title="Home" />
-      <h1 className={classes.title}>グッドデイサービスです。</h1>
-      <Link to="/ServicesPage">Go to page 2</Link>
+      <Container>
+        <H1>グッドデイサービスについて</H1>
+        <Introduction {...{ isDesktop }} />
+        <TopCardList {...{ classes, isDesktop }} />
+        <TopSubCardList {...{ classes, isDesktop }} />
+      </Container>
+      <Container>
+        <H1>グッドちゃん</H1>
+        <GoodchanIntro {...{ classes, isDesktop }} />
+      </Container>
+      <Container>
+        <H1>グッドデイ2大イベント!!</H1>
+        <EventIntro {...{ classes, isDesktop }} />
+      </Container>
+
+      <Container>
+        <H1>ガイドラインに基づく評価</H1>
+        <Evaluation {...{ classes }} />
+      </Container>
     </Layout>
-  );
+  )
 }
