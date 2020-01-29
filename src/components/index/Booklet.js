@@ -1,4 +1,5 @@
 import React from 'react'
+import { withPrefix } from 'gatsby'
 import Button from 'components/common/Button'
 
 export default props => {
@@ -10,7 +11,8 @@ export default props => {
       </p>
       <Button
         title="パンフレットダウンロード"
-        link="images/good-day-service.pdf"
+        link={withPrefix('/good-day-service.pdf')}
+        target="_blank"
       />
     </div>
   )

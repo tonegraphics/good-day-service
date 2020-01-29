@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `グッドデイサービス`,
     description: `福岡県飯塚市鯰田にある、高齢者・障がい者・障がい児共生型福祉サービス事業所`,
-    author: `@gatsbyjs`,
+    author: `Hayato OKUMA & Taiga KIYOKAWA`,
   },
   plugins: [
     `gatsby-plugin-sass`,
