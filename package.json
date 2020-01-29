@@ -1,7 +1,7 @@
 {
   "name": "good-day-service",
   "private": true,
-  "description": "福岡県飯塚氏鯰田にある、高齢者・障がい者・障がい児共生型福祉サービス事業所",
+  "description": "福岡県飯塚市鯰田にある、高齢者・障がい者・障がい児共生型福祉サービス事業所",
   "version": "0.1.0",
   "author": "Hayato OKUMA & Taiga KIYOKAWA",
   "dependencies": {
@@ -16,10 +16,13 @@
     "gatsby-plugin-offline": "^3.0.24",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-source-filesystem": "^2.1.39",
+    "gatsby-theme-material-ui": "latest",
     "gatsby-transformer-sharp": "^2.3.6",
     "google-maps-react": "^2.0.2",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
