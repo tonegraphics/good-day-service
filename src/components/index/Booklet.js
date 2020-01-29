@@ -8,7 +8,10 @@ export default props => {
       <p className={classes.body}>
         パンフレットダウンロードはこちら。印刷してお使いください。
       </p>
-      <Button title="パンフレットダウンロード" />
+      <Button
+        title="パンフレットダウンロード"
+        link="images/good-day-service.pdf"
+      />
     </div>
   )
 }
