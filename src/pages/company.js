@@ -34,7 +34,7 @@ export default () => {
             <OfficeNumbers />
             <H2 title="関連事業所" />
             <RelatedOfficeIntro />
-            <H2 title="こどもデイ「41プラス(仮)」建設中!" />
+            <H2 title="こどもデイ「41プラス」5/1(金)オープン！" />
             <NewBuildingIntro {...{ isDesktop }} />
           </div>
         }
