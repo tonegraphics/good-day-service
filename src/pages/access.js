@@ -13,7 +13,7 @@ const rows = [
 
 export default () => {
   return (
-    <Layout page="/access">
+    <Layout page="/access" isTop={false}>
       <SEO title="Access" />
       <Container
         body={
